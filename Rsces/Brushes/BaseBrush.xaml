@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Primary.Lighter" Color="{DynamicResource Primary50}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Primary.Lighter.Foreground" Color="{DynamicResource Primary50Foreground}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Primary.Light" Color="{DynamicResource Primary300}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Primary.Light.Foreground" Color="{DynamicResource Primary300Foreground}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Primary" Color="{DynamicResource Primary500}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Primary.Foreground" Color="{DynamicResource Primary500Foreground}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Primary.Dark" Color="{DynamicResource Primary700}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Primary.Dark.Foreground" Color="{DynamicResource Primary700Foreground}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Secondary.Light" Color="{DynamicResource Secondary200}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Secondary.Light.Foreground" Color="{DynamicResource Secondary200Foreground}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Secondary" Color="{DynamicResource Secondary400}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Secondary.Foreground" Color="{DynamicResource Secondary400Foreground}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Secondary.Dark" Color="{DynamicResource Secondary700}" />
+    <SolidColorBrush x:Key="MaterialDesign.Brush.Secondary.Dark.Foreground" Color="{DynamicResource Secondary700Foreground}" />
+</ResourceDictionary>

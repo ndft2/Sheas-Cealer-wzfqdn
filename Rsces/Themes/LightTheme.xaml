@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:colors="clr-namespace:MaterialDesignColors;assembly=MaterialDesignColors">
+    <colors:StaticResource x:Key="MaterialDesign.Brush.Primary" ResourceKey="MaterialDesign.Brush.Primary" />
+    <colors:StaticResource x:Key="MaterialDesign.Brush.Primary.Foreground" ResourceKey="MaterialDesign.Brush.Primary.Foreground" />
+    <colors:StaticResource x:Key="MaterialDesign.Brush.Secondary" ResourceKey="MaterialDesign.Brush.Secondary" />
+    <colors:StaticResource x:Key="MaterialDesign.Brush.Secondary.Foreground" ResourceKey="MaterialDesign.Brush.Secondary.Foreground" />
+
+    <colors:StaticResource x:Key="MaterialDesign.Brush.AppBar.Background" ResourceKey="MaterialDesign.Brush.Primary.Lighter" />
+    <colors:StaticResource x:Key="MaterialDesign.Brush.LaunchButton.InactiveBackground" ResourceKey="Neutral700" />
+</ResourceDictionary>

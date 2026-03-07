@@ -19,7 +19,7 @@ namespace Sheas_Cealer.Consts {
     // 类通过类似于 ResGen 或 Visual Studio 的工具自动生成的。
     // 若要添加或移除成员，请编辑 .ResX 文件，然后重新运行 ResGen
     // (以 /str 作为命令选项)，或重新生成 VS 项目。
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class AboutMultilangConst {
@@ -61,74 +61,146 @@ namespace Sheas_Cealer.Consts {
         }
         
         /// <summary>
-        ///   查找类似 Password: 的本地化字符串。
+        ///   查找类似 Link copied ✅ 的本地化字符串。
         /// </summary>
-        public static string _ReleasePagePasswordLabel {
+        public static string _LinkCopiedSnackbarMsg {
             get {
-                return ResourceManager.GetString("_ReleasePagePasswordLabel", resourceCulture);
+                return ResourceManager.GetString("_LinkCopiedSnackbarMsg", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 EULA 的本地化字符串。
+        ///   查找类似 My Blog 的本地化字符串。
         /// </summary>
-        public static string AgreementButtonContent {
+        public static string BlogAboutInfoTitle {
             get {
-                return ResourceManager.GetString("AgreementButtonContent", resourceCulture);
+                return ResourceManager.GetString("BlogAboutInfoTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Dev. Space Time 的本地化字符串。
+        ///   查找类似 About Me 的本地化字符串。
         /// </summary>
-        public static string DeveloperButtonContent {
+        public static string CenterAboutInfoTitle {
             get {
-                return ResourceManager.GetString("DeveloperButtonContent", resourceCulture);
+                return ResourceManager.GetString("CenterAboutInfoTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Docs 的本地化字符串。
+        ///   查找类似 Contact Me 的本地化字符串。
         /// </summary>
-        public static string DocumentationButtonContent {
+        public static string ContactAboutInfoTitle {
             get {
-                return ResourceManager.GetString("DocumentationButtonContent", resourceCulture);
+                return ResourceManager.GetString("ContactAboutInfoTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Email 的本地化字符串。
+        ///   查找类似 Copy 的本地化字符串。
         /// </summary>
-        public static string EmailButtonContent {
+        public static string CopyLinkButtonName {
             get {
-                return ResourceManager.GetString("EmailButtonContent", resourceCulture);
+                return ResourceManager.GetString("CopyLinkButtonName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 PP 的本地化字符串。
+        ///   查找类似 Click to copy the corresponding link 的本地化字符串。
         /// </summary>
-        public static string PolicyButtonContent {
+        public static string CopyLinkButtonToolTip {
             get {
-                return ResourceManager.GetString("PolicyButtonContent", resourceCulture);
+                return ResourceManager.GetString("CopyLinkButtonToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Repo 的本地化字符串。
+        ///   查找类似 Space Time 的本地化字符串。
         /// </summary>
-        public static string RepositoryButtonContent {
+        public static string DeveloperAboutInfoContent {
             get {
-                return ResourceManager.GetString("RepositoryButtonContent", resourceCulture);
+                return ResourceManager.GetString("DeveloperAboutInfoContent", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Ver. 的本地化字符串。
+        ///   查找类似 Developer 的本地化字符串。
         /// </summary>
-        public static string VersionButtonLabelContent {
+        public static string DeveloperAboutInfoTitle {
             get {
-                return ResourceManager.GetString("VersionButtonLabelContent", resourceCulture);
+                return ResourceManager.GetString("DeveloperAboutInfoTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Usage Docs 的本地化字符串。
+        /// </summary>
+        public static string DocsAboutInfoTitle {
+            get {
+                return ResourceManager.GetString("DocsAboutInfoTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 License Agreement 的本地化字符串。
+        /// </summary>
+        public static string EulaAboutInfoTitle {
+            get {
+                return ResourceManager.GetString("EulaAboutInfoTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Open 的本地化字符串。
+        /// </summary>
+        public static string GotoLinkButtonName {
+            get {
+                return ResourceManager.GetString("GotoLinkButtonName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to open the corresponding link 的本地化字符串。
+        /// </summary>
+        public static string GotoLinkButtonToolTip {
+            get {
+                return ResourceManager.GetString("GotoLinkButtonToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Issue Feedback 的本地化字符串。
+        /// </summary>
+        public static string IssueAboutInfoTitle {
+            get {
+                return ResourceManager.GetString("IssueAboutInfoTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Privacy Policy 的本地化字符串。
+        /// </summary>
+        public static string PolicyAboutInfoTitle {
+            get {
+                return ResourceManager.GetString("PolicyAboutInfoTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Github Repo 的本地化字符串。
+        /// </summary>
+        public static string RepoAboutInfoTitle {
+            get {
+                return ResourceManager.GetString("RepoAboutInfoTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Version 的本地化字符串。
+        /// </summary>
+        public static string VersionAboutInfoTitle {
+            get {
+                return ResourceManager.GetString("VersionAboutInfoTitle", resourceCulture);
             }
         }
     }

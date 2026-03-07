@@ -1,0 +1,28 @@
+﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:mdix="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:consts="clr-namespace:Sheas_Cealer.Consts"
+      xmlns:convs="clr-namespace:Sheas_Cealer.Convs"
+      xmlns:models="clr-namespace:Sheas_Cealer.Models"
+      xmlns:preses="clr-namespace:Sheas_Cealer.Preses"
+      x:Class="Sheas_Cealer.Pages.RulesPage" x:ClassModifier="internal" mc:Ignorable="d"
+      Title="{x:Static consts:GlobalConst.RulesFlyoutItemTitle}">
+    <ScrollViewer>
+        <StackPanel>
+            <Button Grid.Column="0" Margin="5" d:Content="# # # # # #"
+                    ToolTip="{x:Static consts:MainConst.UpdateUpstreamHostButtonToolTip}"
+                    Click="UpdateUpstreamHostButton_Click" />
+            <Button x:Name="EditLocalHostButton"
+                    Grid.Column="0" Margin="5"
+                    Content="{x:Static consts:RulesConst.EditLocalHostButtonContent}"
+                    ToolTip="{x:Static consts:RulesConst.EditLocalHostButtonToolTip}"
+                    Click="EditHostButton_Click" />
+            <Button Grid.Column="1" Margin="5"
+                    Content="{x:Static consts:RulesConst.EditUpstreamHostButtonContent}"
+                    ToolTip="{x:Static consts:RulesConst.EditUpstreamHostButtonToolTip}"
+                    Click="EditHostButton_Click" />
+        </StackPanel>
+    </ScrollViewer>
+</Page>

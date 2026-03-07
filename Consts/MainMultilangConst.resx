@@ -123,65 +123,95 @@
   <data name="AboutButtonToolTip" xml:space="preserve">
     <value>Click to open the about window</value>
   </data>
+  <data name="BrowserBarTextBlockText" xml:space="preserve">
+    <value>Browser Cealing</value>
+  </data>
+  <data name="BrowserBarTextBlockToolTip" xml:space="preserve">
+    <value>Injecting startup args to conceal SNI extensions of the selected browser's traffic. Browsers with Chromium version 141.0.7356.0 or above are not supported. Rules beginning with $ or ^ are ignored</value>
+  </data>
   <data name="BrowserButtonContent" xml:space="preserve">
     <value>Start Cealing</value>
   </data>
   <data name="BrowserButtonToolTip" xml:space="preserve">
     <value>Click to launch the injected browser</value>
   </data>
-  <data name="ComihomoButtonIsInitingContent" xml:space="preserve">
+  <data name="CealerLabelText" xml:space="preserve">
+    <value>Cealer</value>
+  </data>
+  <data name="ClashBarTextBlockText" xml:space="preserve">
+    <value>Global Purging</value>
+  </data>
+  <data name="ClashBarTextBlockToolTip" xml:space="preserve">
+    <value>Use Clash TUN + DoH to resolve DNS queries of system-wide traffic against DNS pollution. Cealing host is not used in this feature</value>
+  </data>
+  <data name="ClashButtonIsInitingContent" xml:space="preserve">
+    <value>GLB. Purging INIT.</value>
+  </data>
+  <data name="ClashButtonIsRunningContent" xml:space="preserve">
+    <value>Stop GLB. Purging</value>
+  </data>
+  <data name="ClashButtonIsRunningToolTip" xml:space="preserve">
+    <value>Click to stop the local Clash</value>
+  </data>
+  <data name="ClashButtonIsStoppedContent" xml:space="preserve">
+    <value>Start GLB. Purging</value>
+  </data>
+  <data name="ClashButtonIsStoppedToolTip" xml:space="preserve">
+    <value>Click to launch a local Clash</value>
+  </data>
+  <data name="ClashButtonIsStoppingContent" xml:space="preserve">
+    <value>GLB. Purging STP.</value>
+  </data>
+  <data name="CoclashButtonIsInitingContent" xml:space="preserve">
     <value>GLB. Purging CHA.</value>
   </data>
   <data name="ConginxButtonIsInitingContent" xml:space="preserve">
     <value>GLB. Cealing INIT.</value>
   </data>
-  <data name="EditHostsConfButtonContent" xml:space="preserve">
-    <value>Edit Hosts Conf</value>
+  <data name="ElevateButtonName" xml:space="preserve">
+    <value>Elevate</value>
   </data>
-  <data name="EditHostsConfButtonToolTip" xml:space="preserve">
-    <value>Click to edit hosts conf</value>
+  <data name="ElevateButtonToolTip" xml:space="preserve">
+    <value>Click to restart as admin</value>
   </data>
-  <data name="EditLocalHostButtonContent" xml:space="preserve">
-    <value>Edit Local Host</value>
+  <data name="ExpandToggleButtonClosedToolTip" xml:space="preserve">
+    <value>Click to expand extention bar</value>
   </data>
-  <data name="EditLocalHostButtonToolTip" xml:space="preserve">
-    <value>Click to edit local host</value>
+  <data name="ExpandToggleButtonName" xml:space="preserve">
+    <value>Expand</value>
   </data>
-  <data name="EditMihomoConfButtonContent" xml:space="preserve">
-    <value>Edit Mihomo Conf</value>
+  <data name="ExpandToggleButtonOpenToolTip" xml:space="preserve">
+    <value>Click to collapse extention bar</value>
   </data>
-  <data name="EditMihomoConfButtonToolTip" xml:space="preserve">
-    <value>Click to edit mihomo conf</value>
+  <data name="GithubButtonName" xml:space="preserve">
+    <value>Github</value>
   </data>
-  <data name="EditNginxConfButtonContent" xml:space="preserve">
-    <value>Edit Nginx Conf</value>
+  <data name="GithubButtonToolTip" xml:space="preserve">
+    <value>Click to open my github repo</value>
   </data>
-  <data name="EditNginxConfButtonToolTip" xml:space="preserve">
-    <value>Click to edit nginx conf</value>
+  <data name="HumburgerToggleButtonClosedToolTip" xml:space="preserve">
+    <value>Click to open navigation drawer</value>
   </data>
-  <data name="EditUpstreamHostButtonContent" xml:space="preserve">
-    <value>Edit UPSTR. Host</value>
+  <data name="HumburgerToggleButtonName" xml:space="preserve">
+    <value>Navigation</value>
   </data>
-  <data name="EditUpstreamHostButtonToolTip" xml:space="preserve">
-    <value>Click to edit upstream host</value>
+  <data name="HumburgerToggleButtonOpenToolTip" xml:space="preserve">
+    <value>Click to close navigation drawer</value>
   </data>
-  <data name="MihomoButtonIsInitingContent" xml:space="preserve">
-    <value>GLB. Purging INIT.</value>
+  <data name="LaunchButtonActiveToolTip" xml:space="preserve">
+    <value>Click to stop global cealing</value>
   </data>
-  <data name="MihomoButtonIsRunningContent" xml:space="preserve">
-    <value>Stop GLB. Purging</value>
+  <data name="LaunchButtonInactiveToolTip" xml:space="preserve">
+    <value>Click to start global cealing</value>
   </data>
-  <data name="MihomoButtonIsRunningToolTip" xml:space="preserve">
-    <value>Click to stop the local Mihomo</value>
+  <data name="LaunchButtonName" xml:space="preserve">
+    <value>Launch</value>
   </data>
-  <data name="MihomoButtonIsStoppedContent" xml:space="preserve">
-    <value>Start GLB. Purging</value>
+  <data name="NginxBarTextBlockText" xml:space="preserve">
+    <value>Global Cealing</value>
   </data>
-  <data name="MihomoButtonIsStoppedToolTip" xml:space="preserve">
-    <value>Click to launch a local Mihomo</value>
-  </data>
-  <data name="MihomoButtonIsStoppingContent" xml:space="preserve">
-    <value>GLB. Purging STP.</value>
+  <data name="NginxBarTextBlockToolTip" xml:space="preserve">
+    <value>Use Nginx local reverse proxy to conceal SNI extensions of system-wide traffic. Fragment is not supported. Wildcards not at the beginning of the rules are ignored. Rules beginning with # % or ^ are ignored</value>
   </data>
   <data name="NginxButtonIsInitingContent" xml:space="preserve">
     <value>GLB. Cealing INIT.</value>
@@ -210,6 +240,18 @@
   <data name="NoClickButtonIsStoppedToolTip" xml:space="preserve">
     <value>Do not click this button</value>
   </data>
+  <data name="OverflowPopupBoxName" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="OverflowPopupBoxToolTip" xml:space="preserve">
+    <value>Click to open more options</value>
+  </data>
+  <data name="PinButtonName" xml:space="preserve">
+    <value>Pin</value>
+  </data>
+  <data name="PinButtonToolTip" xml:space="preserve">
+    <value>Click to pin extention bar</value>
+  </data>
   <data name="SettingsBoxBrowserPathToolTip" xml:space="preserve">
     <value>Fill in a Chromium-based browser path</value>
   </data>
@@ -237,17 +279,35 @@
   <data name="SettingsFunctionButtonUpstreamUrlContent" xml:space="preserve">
     <value>Reset URL</value>
   </data>
-  <data name="SettingsModeButtonBrowserPathContent" xml:space="preserve">
+  <data name="SettingsStateButtonBrowserPathContent" xml:space="preserve">
     <value>Browser Path</value>
   </data>
-  <data name="SettingsModeButtonExtraArgsContent" xml:space="preserve">
+  <data name="SettingsStateButtonExtraArgsContent" xml:space="preserve">
     <value>Extra Args</value>
   </data>
-  <data name="SettingsModeButtonToolTip" xml:space="preserve">
+  <data name="SettingsStateButtonToolTip" xml:space="preserve">
     <value>Click to switch settings</value>
   </data>
-  <data name="SettingsModeButtonUpstreamUrlContent" xml:space="preserve">
+  <data name="SettingsStateButtonUpstreamUrlContent" xml:space="preserve">
     <value>Upstream URL</value>
+  </data>
+  <data name="SheasLabelText" xml:space="preserve">
+    <value>Sheas</value>
+  </data>
+  <data name="TitleTextBlockText" xml:space="preserve">
+    <value>Sheas Cealer</value>
+  </data>
+  <data name="UpdateHostButtonContent" xml:space="preserve">
+    <value>Check Host For Update</value>
+  </data>
+  <data name="UpdateHostButtonToolTip" xml:space="preserve">
+    <value>Tap to check host for update</value>
+  </data>
+  <data name="UpdateSoftwareButtonContent" xml:space="preserve">
+    <value>Check Software For Update</value>
+  </data>
+  <data name="UpdateSoftwareButtonToolTip" xml:space="preserve">
+    <value>Tap to check software for update</value>
   </data>
   <data name="UpdateUpstreamHostButtonContent" xml:space="preserve">
     <value>Update Upstream Host</value>
@@ -258,8 +318,17 @@
   <data name="_BrowserPathDialogFilterFileType" xml:space="preserve">
     <value>Browser</value>
   </data>
-  <data name="_CealHostErrorPrompt" xml:space="preserve">
+  <data name="_BrowserProcessKillPrompt" xml:space="preserve">
+    <value>All processes of the selected browser will be closed before launching. Do you want to continue?</value>
+  </data>
+  <data name="_CealHostInvalidMsg" xml:space="preserve">
     <value>Some cealing hosts contain syntax errors and cannot be recognized. Do you want to continue anyway?</value>
+  </data>
+  <data name="_ClashConfInvalidMsg" xml:space="preserve">
+    <value>The clash conf contains syntax errors and cannot be recognized. Do you want to continue anyway?</value>
+  </data>
+  <data name="_ClashLaunchErrorMsg" xml:space="preserve">
+    <value>Clash failed to launch</value>
   </data>
   <data name="_GameClickOnceMsg" xml:space="preserve">
     <value>I know you would click me, but nothing will actually happen. Whee~</value>
@@ -282,35 +351,26 @@
   <data name="_GameStartMsg" xml:space="preserve">
     <value>No, please kill me. I... can't control it...</value>
   </data>
-  <data name="_KillBrowserProcessPrompt" xml:space="preserve">
-    <value>All processes of the selected browser will be closed before launching. Do you want to continue?</value>
+  <data name="_NginxConfInvalidMsg" xml:space="preserve">
+    <value>The nginx conf contains syntax errors and cannot be recognized. Do you want to continue anyway?</value>
   </data>
-  <data name="_LaunchHostsNginxPrompt" xml:space="preserve">
-    <value>You are using hosts-based non-wildcard domain global cealing. Do you want to continue?</value>
-  </data>
-  <data name="_LaunchMihomoErrorMsg" xml:space="preserve">
-    <value>Mihomo failed to launch</value>
-  </data>
-  <data name="_LaunchNginxErrorPrompt" xml:space="preserve">
-    <value>Nginx failed to launch. Do you want to open the error log?</value>
-  </data>
-  <data name="_LaunchNginxFlashingPrompt" xml:space="preserve">
-    <value>Warning: The proxy core is under attack and failes to conceal SNI. The SNI removal mode has been turned on urgently. Do you want to continue?</value>
-  </data>
-  <data name="_LaunchProxyPrompt" xml:space="preserve">
-    <value>Please remember to come back and stop the proxy manually after use. Do you want to continue?</value>
-  </data>
-  <data name="_MihomoConfErrorMsg" xml:space="preserve">
-    <value>The mihomo conf contains syntax errors and cannot be recognized</value>
-  </data>
-  <data name="_NginxHttpPortOccupiedPrompt" xml:space="preserve">
+  <data name="_NginxHttpPortOccupiedMsg" xml:space="preserve">
     <value>The local port 80 is occupied. Do you want to use port {0} to continue? This may cause the http connection to fail to automatically jump to https</value>
   </data>
-  <data name="_NginxHttpsPortOccupiedPrompt" xml:space="preserve">
+  <data name="_NginxHttpsPortOccupiedMsg" xml:space="preserve">
     <value>The local port 443 is occupied. Do you want to use port {0} to continue? This may cause the global cealing to not work properly</value>
+  </data>
+  <data name="_NginxLaunchErrorPrompt" xml:space="preserve">
+    <value>Nginx failed to launch. Do you want to open the error log?</value>
+  </data>
+  <data name="_NginxLaunchFlashingPrompt" xml:space="preserve">
+    <value>Warning: The proxy core is under attack and failes to conceal SNI. The SNI removal mode has been turned on urgently. Do you want to continue?</value>
   </data>
   <data name="_OverrideUpstreamHostPrompt" xml:space="preserve">
     <value>There is an update available. Do you want to update upstream host? If No it will only open the upstream host web page for you</value>
+  </data>
+  <data name="_ProxyLaunchPrompt" xml:space="preserve">
+    <value>Please remember to come back and stop the proxy manually after use. Do you want to continue?</value>
   </data>
   <data name="_UpdateUpstreamHostSuccessMsg" xml:space="preserve">
     <value>Update successfully</value>

@@ -117,28 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AgreementButtonContent" xml:space="preserve">
-    <value>EULA</value>
+  <data name="BlogAboutInfoTitle" xml:space="preserve">
+    <value>My Blog</value>
   </data>
-  <data name="DeveloperButtonContent" xml:space="preserve">
-    <value>Dev. Space Time</value>
+  <data name="CenterAboutInfoTitle" xml:space="preserve">
+    <value>About Me</value>
   </data>
-  <data name="DocumentationButtonContent" xml:space="preserve">
-    <value>Docs</value>
+  <data name="ContactAboutInfoTitle" xml:space="preserve">
+    <value>Contact Me</value>
   </data>
-  <data name="EmailButtonContent" xml:space="preserve">
-    <value>Email</value>
+  <data name="CopyLinkButtonName" xml:space="preserve">
+    <value>Copy</value>
   </data>
-  <data name="PolicyButtonContent" xml:space="preserve">
-    <value>PP</value>
+  <data name="CopyLinkButtonToolTip" xml:space="preserve">
+    <value>Click to copy the corresponding link</value>
   </data>
-  <data name="RepositoryButtonContent" xml:space="preserve">
-    <value>Repo</value>
+  <data name="DeveloperAboutInfoContent" xml:space="preserve">
+    <value>Space Time</value>
   </data>
-  <data name="VersionButtonLabelContent" xml:space="preserve">
-    <value>Ver.</value>
+  <data name="DeveloperAboutInfoTitle" xml:space="preserve">
+    <value>Developer</value>
   </data>
-  <data name="_ReleasePagePasswordLabel" xml:space="preserve">
-    <value>Password:</value>
+  <data name="DocsAboutInfoTitle" xml:space="preserve">
+    <value>Usage Docs</value>
+  </data>
+  <data name="EulaAboutInfoTitle" xml:space="preserve">
+    <value>License Agreement</value>
+  </data>
+  <data name="GotoLinkButtonName" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="GotoLinkButtonToolTip" xml:space="preserve">
+    <value>Click to open the corresponding link</value>
+  </data>
+  <data name="IssueAboutInfoTitle" xml:space="preserve">
+    <value>Issue Feedback</value>
+  </data>
+  <data name="PolicyAboutInfoTitle" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="RepoAboutInfoTitle" xml:space="preserve">
+    <value>Github Repo</value>
+  </data>
+  <data name="VersionAboutInfoTitle" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="_LinkCopiedSnackbarMsg" xml:space="preserve">
+    <value>Link copied ✅</value>
   </data>
 </root>

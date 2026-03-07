@@ -19,7 +19,7 @@ namespace Sheas_Cealer.Consts {
     // 类通过类似于 ResGen 或 Visual Studio 的工具自动生成的。
     // 若要添加或移除成员，请编辑 .ResX 文件，然后重新运行 ResGen
     // (以 /str 作为命令选项)，或重新生成 VS 项目。
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class SettingsMultilangConst {
@@ -61,137 +61,515 @@ namespace Sheas_Cealer.Consts {
         }
         
         /// <summary>
-        ///   查找类似 Switch successfuly, restart to refresh the windows 的本地化字符串。
+        ///   查找类似 File extention invalid 的本地化字符串。
         /// </summary>
-        public static string _ChangeLangSuccessMsg {
+        public static string _BrowserPathExtensionInvalidValidationContent {
             get {
-                return ResourceManager.GetString("_ChangeLangSuccessMsg", resourceCulture);
+                return ResourceManager.GetString("_BrowserPathExtensionInvalidValidationContent", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 SWT. Color (Fully Random) 的本地化字符串。
+        ///   查找类似 File not found 的本地化字符串。
         /// </summary>
-        public static string ColorsButtonContent {
+        public static string _BrowserPathFileInvalidValidationContent {
             get {
-                return ResourceManager.GetString("ColorsButtonContent", resourceCulture);
+                return ResourceManager.GetString("_BrowserPathFileInvalidValidationContent", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Click to switch colors 的本地化字符串。
+        ///   查找类似 Args format invalid 的本地化字符串。
         /// </summary>
-        public static string ColorsButtonToolTip {
+        public static string _ExtraArgsInvalidValidationContent {
             get {
-                return ResourceManager.GetString("ColorsButtonToolTip", resourceCulture);
+                return ResourceManager.GetString("_ExtraArgsInvalidValidationContent", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Switch Lang (中文 → En) 的本地化字符串。
+        ///   查找类似 Url format invalid 的本地化字符串。
         /// </summary>
-        public static string LangsButtonChineseLangContent {
+        public static string _UpstreamUrlInvalidValidationContent {
             get {
-                return ResourceManager.GetString("LangsButtonChineseLangContent", resourceCulture);
+                return ResourceManager.GetString("_UpstreamUrlInvalidValidationContent", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Switch Lang (En → Auto) 的本地化字符串。
+        ///   查找类似 Control whether to run software as admin everytime on startup 的本地化字符串。
         /// </summary>
-        public static string LangsButtonEnglishLangContent {
+        public static string AlwaysAdminEnabledSettingsItemContent {
             get {
-                return ResourceManager.GetString("LangsButtonEnglishLangContent", resourceCulture);
+                return ResourceManager.GetString("AlwaysAdminEnabledSettingsItemContent", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Switch Lang (Auto → 中文) 的本地化字符串。
+        ///   查找类似 Run Software As Admin 的本地化字符串。
         /// </summary>
-        public static string LangsButtonInheritLangContent {
+        public static string AlwaysAdminEnabledSettingsItemTitle {
             get {
-                return ResourceManager.GetString("LangsButtonInheritLangContent", resourceCulture);
+                return ResourceManager.GetString("AlwaysAdminEnabledSettingsItemTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Click to switch langs 的本地化字符串。
+        ///   查找类似 Click to toggle the always run software as admin feature on / off 的本地化字符串。
         /// </summary>
-        public static string LangsButtonToolTip {
+        public static string AlwaysAdminEnabledToggleButtonToolTip {
             get {
-                return ResourceManager.GetString("LangsButtonToolTip", resourceCulture);
+                return ResourceManager.GetString("AlwaysAdminEnabledToggleButtonToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 SWT. Theme (Dark → Light) 的本地化字符串。
+        ///   查找类似 Select a Chromium-based browser 的本地化字符串。
         /// </summary>
-        public static string ThemesButtonDarkThemeContent {
+        public static string BrowserPathComboBoxHint {
             get {
-                return ResourceManager.GetString("ThemesButtonDarkThemeContent", resourceCulture);
+                return ResourceManager.GetString("BrowserPathComboBoxHint", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 SWT. Theme (Auto → Dark) 的本地化字符串。
+        ///   查找类似 Click to select a browser path 的本地化字符串。
         /// </summary>
-        public static string ThemesButtonInheritThemeContent {
+        public static string BrowserPathComboBoxToolTip {
             get {
-                return ResourceManager.GetString("ThemesButtonInheritThemeContent", resourceCulture);
+                return ResourceManager.GetString("BrowserPathComboBoxToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 SWT. Theme (Light → Auto) 的本地化字符串。
+        ///   查找类似 Select a browser path used for browser cealing (exe extension) 的本地化字符串。
         /// </summary>
-        public static string ThemesButtonLightThemeContent {
+        public static string BrowserPathSettingsItemContent {
             get {
-                return ResourceManager.GetString("ThemesButtonLightThemeContent", resourceCulture);
+                return ResourceManager.GetString("BrowserPathSettingsItemContent", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Click to switch themes 的本地化字符串。
+        ///   查找类似 Browser Path 的本地化字符串。
         /// </summary>
-        public static string ThemesButtonToolTip {
+        public static string BrowserPathSettingsItemTitle {
             get {
-                return ResourceManager.GetString("ThemesButtonToolTip", resourceCulture);
+                return ResourceManager.GetString("BrowserPathSettingsItemTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 SWT. Weight (Bold → Light) 的本地化字符串。
+        ///   查找类似 Edit 的本地化字符串。
         /// </summary>
-        public static string WeightsButtonBoldWeightContent {
+        public static string ClashConfButtonName {
             get {
-                return ResourceManager.GetString("WeightsButtonBoldWeightContent", resourceCulture);
+                return ResourceManager.GetString("ClashConfButtonName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 SWT. Weight (Light → Regular) 的本地化字符串。
+        ///   查找类似 Click to edit the additional Clash conf 的本地化字符串。
         /// </summary>
-        public static string WeightsButtonLightWeightContent {
+        public static string ClashConfButtonToolTip {
             get {
-                return ResourceManager.GetString("WeightsButtonLightWeightContent", resourceCulture);
+                return ResourceManager.GetString("ClashConfButtonToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 SWT. Weight (RGL. → Bold) 的本地化字符串。
+        ///   查找类似 Edit the additional config in config.yaml used for global cealing. Detailed instructions refer to Clash Meta docs (Optional) 的本地化字符串。
         /// </summary>
-        public static string WeightsButtonRegularWeightContent {
+        public static string ClashConfSettingsItemContent {
             get {
-                return ResourceManager.GetString("WeightsButtonRegularWeightContent", resourceCulture);
+                return ResourceManager.GetString("ClashConfSettingsItemContent", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Click to switch font weights 的本地化字符串。
+        ///   查找类似 Clash Conf 的本地化字符串。
         /// </summary>
-        public static string WeightsButtonToolTip {
+        public static string ClashConfSettingsItemTitle {
             get {
-                return ResourceManager.GetString("WeightsButtonToolTip", resourceCulture);
+                return ResourceManager.GetString("ClashConfSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Control whether to use Clash instead of Hosts to enable wildcard domain matching on global cealing (Global cealing will not match any subdomain other than www for rules beginning with a wildcard if this option is disabled) 的本地化字符串。
+        /// </summary>
+        public static string ClashHostsEnabledSettingsItemContent {
+            get {
+                return ResourceManager.GetString("ClashHostsEnabledSettingsItemContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Wildcard Domain Cealing 的本地化字符串。
+        /// </summary>
+        public static string ClashHostsEnabledSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("ClashHostsEnabledSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to toggle the wildcard domain cealing feature on / off 的本地化字符串。
+        /// </summary>
+        public static string ClashHostsEnabledToggleButtonToolTip {
+            get {
+                return ResourceManager.GetString("ClashHostsEnabledToggleButtonToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Add the additional Chromium startup args used for browser cealing (Separated by spaces) 的本地化字符串。
+        /// </summary>
+        public static string ExtraArgsSettingsItemContent {
+            get {
+                return ResourceManager.GetString("ExtraArgsSettingsItemContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Browser Args 的本地化字符串。
+        /// </summary>
+        public static string ExtraArgsSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("ExtraArgsSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Extra startup args (Optional) 的本地化字符串。
+        /// </summary>
+        public static string ExtraArgsTextBoxHint {
+            get {
+                return ResourceManager.GetString("ExtraArgsTextBoxHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to add the additional browser startup args 的本地化字符串。
+        /// </summary>
+        public static string ExtraArgsTextBoxToolTip {
+            get {
+                return ResourceManager.GetString("ExtraArgsTextBoxToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Edit 的本地化字符串。
+        /// </summary>
+        public static string HostsConfButtonName {
+            get {
+                return ResourceManager.GetString("HostsConfButtonName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to edit the Hosts conf 的本地化字符串。
+        /// </summary>
+        public static string HostsConfButtonToolTip {
+            get {
+                return ResourceManager.GetString("HostsConfButtonToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Edit the system Hosts used for local DNS resolution (Taking effect upon saving) 的本地化字符串。
+        /// </summary>
+        public static string HostsConfSettingsItemContent {
+            get {
+                return ResourceManager.GetString("HostsConfSettingsItemContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Hosts Conf 的本地化字符串。
+        /// </summary>
+        public static string HostsConfSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("HostsConfSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Control whether to keep program running after starting browser cealing (The browser may fail to launch if this option is disabled) 的本地化字符串。
+        /// </summary>
+        public static string KeepRunningEnabledSettingsItemContent {
+            get {
+                return ResourceManager.GetString("KeepRunningEnabledSettingsItemContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Keep Program Running 的本地化字符串。
+        /// </summary>
+        public static string KeepRunningEnabledSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("KeepRunningEnabledSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to toggle the keep program running behavior on / off 的本地化字符串。
+        /// </summary>
+        public static string KeepRunningEnabledToggleButtonToolTip {
+            get {
+                return ResourceManager.GetString("KeepRunningEnabledToggleButtonToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Select a UI l10n language 的本地化字符串。
+        /// </summary>
+        public static string LangOptionComboBoxHint {
+            get {
+                return ResourceManager.GetString("LangOptionComboBoxHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to select a l10n language 的本地化字符串。
+        /// </summary>
+        public static string LangOptionComboBoxToolTip {
+            get {
+                return ResourceManager.GetString("LangOptionComboBoxToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Lang L10n 的本地化字符串。
+        /// </summary>
+        public static string LangOptionSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("LangOptionSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Edit 的本地化字符串。
+        /// </summary>
+        public static string NginxConfButtonName {
+            get {
+                return ResourceManager.GetString("NginxConfButtonName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to edit the additional Nginx conf 的本地化字符串。
+        /// </summary>
+        public static string NginxConfButtonToolTip {
+            get {
+                return ResourceManager.GetString("NginxConfButtonToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Edit the additional config in nginx.conf used for global cealing. Detailed instructions refer to Nginx docs (Optional) 的本地化字符串。
+        /// </summary>
+        public static string NginxConfSettingsItemContent {
+            get {
+                return ResourceManager.GetString("NginxConfSettingsItemContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Nginx Conf 的本地化字符串。
+        /// </summary>
+        public static string NginxConfSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("NginxConfSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Control whether to enable the traffic speed monitor feature 的本地化字符串。
+        /// </summary>
+        public static string SpeedMonitorEnabledSettingsItemContent {
+            get {
+                return ResourceManager.GetString("SpeedMonitorEnabledSettingsItemContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Traffic Speed Monitor 的本地化字符串。
+        /// </summary>
+        public static string SpeedMonitorEnabledSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("SpeedMonitorEnabledSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to toggle the traffic speed monitor feature on / off 的本地化字符串。
+        /// </summary>
+        public static string SpeedMonitorEnabledToggleButtonToolTip {
+            get {
+                return ResourceManager.GetString("SpeedMonitorEnabledToggleButtonToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Select a UI color flavor 的本地化字符串。
+        /// </summary>
+        public static string ThemeColorComboBoxHint {
+            get {
+                return ResourceManager.GetString("ThemeColorComboBoxHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to select a flavor color 的本地化字符串。
+        /// </summary>
+        public static string ThemeColorComboBoxToolTip {
+            get {
+                return ResourceManager.GetString("ThemeColorComboBoxToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Flavor Color 的本地化字符串。
+        /// </summary>
+        public static string ThemeColorSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("ThemeColorSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Select a UI theme state 的本地化字符串。
+        /// </summary>
+        public static string ThemeStateComboBoxHint {
+            get {
+                return ResourceManager.GetString("ThemeStateComboBoxHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to select a theme state 的本地化字符串。
+        /// </summary>
+        public static string ThemeStateComboBoxToolTip {
+            get {
+                return ResourceManager.GetString("ThemeStateComboBoxToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Theme State 的本地化字符串。
+        /// </summary>
+        public static string ThemeStateSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("ThemeStateSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Control whether to check host for update automatically on startup 的本地化字符串。
+        /// </summary>
+        public static string UpdateHostEnabledSettingsItemContent {
+            get {
+                return ResourceManager.GetString("UpdateHostEnabledSettingsItemContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Check Host For Update 的本地化字符串。
+        /// </summary>
+        public static string UpdateHostEnabledSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("UpdateHostEnabledSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to toggle the auto check host for update feature on / off 的本地化字符串。
+        /// </summary>
+        public static string UpdateHostEnabledToggleButtonToolTip {
+            get {
+                return ResourceManager.GetString("UpdateHostEnabledToggleButtonToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Control whether to check software for update automatically on startup 的本地化字符串。
+        /// </summary>
+        public static string UpdateSoftwareEnabledSettingsItemContent {
+            get {
+                return ResourceManager.GetString("UpdateSoftwareEnabledSettingsItemContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Check Software For Update 的本地化字符串。
+        /// </summary>
+        public static string UpdateSoftwareEnabledSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("UpdateSoftwareEnabledSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to toggle the auto check software for update feature on / off 的本地化字符串。
+        /// </summary>
+        public static string UpdateSoftwareEnabledToggleButtonToolTip {
+            get {
+                return ResourceManager.GetString("UpdateSoftwareEnabledToggleButtonToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Control whether to use mirror to update automatically if host update fails (Only available for Github or Gitlab host source) 的本地化字符串。
+        /// </summary>
+        public static string UpstreamMirrorEnabledSettingsItemContent {
+            get {
+                return ResourceManager.GetString("UpstreamMirrorEnabledSettingsItemContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Select Host Source Mirror 的本地化字符串。
+        /// </summary>
+        public static string UpstreamMirrorEnabledSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("UpstreamMirrorEnabledSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to toggle the auto select host source mirror feature on / off 的本地化字符串。
+        /// </summary>
+        public static string UpstreamMirrorEnabledToggleButtonToolTip {
+            get {
+                return ResourceManager.GetString("UpstreamMirrorEnabledToggleButtonToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Edit the upstream host source link used for host update (using built-in host by default) 的本地化字符串。
+        /// </summary>
+        public static string UpstreamUrlSettingsItemContent {
+            get {
+                return ResourceManager.GetString("UpstreamUrlSettingsItemContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Host Source 的本地化字符串。
+        /// </summary>
+        public static string UpstreamUrlSettingsItemTitle {
+            get {
+                return ResourceManager.GetString("UpstreamUrlSettingsItemTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to edit the upstream host updating source 的本地化字符串。
+        /// </summary>
+        public static string UpstreamUrlTextBoxToolTip {
+            get {
+                return ResourceManager.GetString("UpstreamUrlTextBoxToolTip", resourceCulture);
             }
         }
     }

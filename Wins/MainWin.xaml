@@ -1,222 +1,565 @@
-﻿<Window x:Class="Sheas_Cealer.Wins.MainWin"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mdix="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
         xmlns:consts="clr-namespace:Sheas_Cealer.Consts"
-        xmlns:convs="clr-namespace:Sheas_Cealer.Convs"
+        xmlns:models="clr-namespace:Sheas_Cealer.Models"
         xmlns:preses="clr-namespace:Sheas_Cealer.Preses"
-        mc:Ignorable="d"
-        AllowDrop="True"
-        WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" SizeToContent="Height"
+        x:Class="Sheas_Cealer.Wins.MainWin" x:ClassModifier="internal" mc:Ignorable="d"
         d:DataContext="{d:DesignInstance preses:MainPres}"
-        Style="{DynamicResource CommonWindow}"
-        Width="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainWinWidthConv}}"
-        SourceInitialized="MainWin_SourceInitialized" Loaded="MainWin_Loaded" Closing="MainWin_Closing" DragEnter="MainWin_DragEnter" Drop="MainWin_Drop" KeyDown="MainWin_KeyDown">
-    <Grid Margin="5">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        Style="{StaticResource MaterialDesignWindow}"
+        Title="{Binding WindowTitle}"
+        Width="324" Height="504" MinWidth="324" MinHeight="504"
+        SourceInitialized="MainWin_SourceInitialized" Loaded="MainWin_Loaded" Closing="MainWin_Closing" KeyDown="MainWin_KeyDown">
+    <shell:WindowChrome.WindowChrome>
+        <shell:WindowChrome NonClientFrameEdges="Left,Bottom,Right" GlassFrameThickness="0,76,0,0" CaptionHeight="74" />
+    </shell:WindowChrome.WindowChrome>
+    <Window.Template>
+        <ControlTemplate TargetType="Window">
+            <mdix:DialogHost d:DataContext="{d:DesignInstance preses:MainPres}"
+                             shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                             SnackbarMessageQueue="{Binding SnackbarMessageQueue}">
+                <mdix:DialogHost.DialogContentTemplate>
+                    <DataTemplate DataType="models:DialogContent">
+                        <StackPanel Margin="16">
+                            <TextBlock Text="{Binding Title}"
+                                       Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
+                                       Margin="0,0,0,8" />
+                            <TextBlock Text="{Binding Message}"
+                                       Style="{StaticResource MaterialDesignCaptionTextBlock}"
+                                       Visibility="{Binding Message, StringFormat=Visible, TargetNullValue=Collapsed}"
+                                       Margin="0,0,0,8" />
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Right">
+                                <Button Content="{Binding LeftButton.Content}"
+                                        Style="{StaticResource MaterialDesignFlatButton}"
+                                        Visibility="{Binding LeftButton.Content, StringFormat=Visible, TargetNullValue=Collapsed}"
+                                        Margin="0,0,8,0"
+                                        IsDefault="{Binding LeftButton.IsDefault}"
+                                        IsCancel="{Binding LeftButton.IsCancel}"
+                                        Click="LeftDialogButton_Click" />
+                                <Button Content="{Binding RightButton.Content}"
+                                        Style="{StaticResource MaterialDesignFlatButton}"
+                                        IsDefault="{Binding RightButton.IsDefault}"
+                                        IsCancel="{Binding RightButton.IsCancel}"
+                                        Click="RightDialogButton_Click" />
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </mdix:DialogHost.DialogContentTemplate>
 
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
+                <DockPanel>
+                    <Grid DockPanel.Dock="Top" Margin="12,28,12,0" Height="48">
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Left" Margin="0,4">
+                            <Viewbox Margin="8,0,16,0">
+                                <mdix:Ripple>
+                                    <ToggleButton IsChecked="{Binding IsFlyoutOpen}"
+                                                  AutomationProperties.Name="{x:Static consts:MainConst.HumburgerToggleButtonName}">
+                                        <ToggleButton.Style>
+                                            <Style TargetType="ToggleButton"
+                                                   BasedOn="{StaticResource MaterialDesignHamburgerToggleButton}">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding IsFlyoutOpen}"
+                                                                 Value="True">
+                                                        <Setter Property="ToolTip"
+                                                                Value="{x:Static consts:MainConst.HumburgerToggleButtonOpenToolTip}" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
 
-            <Button Grid.Column="0" Margin="5" d:Content="# # # #"
-                    Content="{Binding SettingsMode, Converter={x:Static convs:MainConv.MainSettingsModeButtonContentConv}}"
-                    ToolTip="{x:Static consts:MainConst.SettingsModeButtonToolTip}"
-                    Click="SettingsModeButton_Click" />
-            <TextBox x:Name="SettingsBox"
-                     Grid.Column="1" Margin="5" VerticalContentAlignment="Center" md:HintAssist.IsFloating="True"
-                     AutomationProperties.Name="{Binding SettingsMode, Converter={x:Static convs:MainConv.MainSettingsBoxHintConv}}"
-                     md:HintAssist.Hint="{Binding SettingsMode, Converter={x:Static convs:MainConv.MainSettingsBoxHintConv}}"
-                     ToolTip="{Binding SettingsMode, Converter={x:Static convs:MainConv.MainSettingsBoxToolTipConv}}"
-                     TextChanged="SettingsBox_TextChanged" PreviewDragOver="MainWin_DragEnter">
-                <TextBox.Text>
-                    <MultiBinding Mode="OneWay" UpdateSourceTrigger="PropertyChanged"
-                                  Converter="{x:Static convs:MainConv.MainSettingsBoxTextConv}">
-                        <Binding Path="SettingsMode" />
-                        <Binding Path="BrowserPath" />
-                        <Binding Path="UpstreamUrl" />
-                        <Binding Path="ExtraArgs" />
-                    </MultiBinding>
-                </TextBox.Text>
-            </TextBox>
-            <Button Grid.Column="2" Margin="5" d:Content="# # # #"
-                    Content="{Binding SettingsMode, Converter={x:Static convs:MainConv.MainSettingsFunctionButtonContentConv}}"
-                    ToolTip="{x:Static consts:MainConst.SettingsFunctionButtonToolTip}"
-                    Click="SettingsFunctionButton_Click" />
-        </Grid>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainProxyColumnWidthConv}}" />
-                <ColumnDefinition Width="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainProxyColumnWidthConv}}" />
-            </Grid.ColumnDefinitions>
+                                                <Setter Property="ToolTip"
+                                                        Value="{x:Static consts:MainConst.HumburgerToggleButtonClosedToolTip}" />
+                                            </Style>
+                                        </ToggleButton.Style>
+                                    </ToggleButton>
+                                </mdix:Ripple>
+                            </Viewbox>
+                            <TextBlock Text="{x:Static consts:MainConst.TitleTextBlockText}"
+                                       Style="{StaticResource MaterialDesignSubtitle1TextBlock}" />
+                        </StackPanel>
+                        <Viewbox HorizontalAlignment="Right" Margin="0,4">
+                            <StackPanel Orientation="Horizontal">
+                                <Button ToolTip="{x:Static consts:MainConst.GithubButtonToolTip}"
+                                        AutomationProperties.Name="{x:Static consts:MainConst.GithubButtonName}"
+                                        Style="{StaticResource MaterialDesignIconForegroundButton}"
+                                        Margin="0,0,4,0"
+                                        Click="GithubButton_Click">
+                                    <Viewbox Child="{mdix:PackIcon Github}" />
+                                </Button>
+                                <Button ToolTip="{x:Static consts:MainConst.ElevateButtonToolTip}"
+                                        AutomationProperties.Name="{x:Static consts:MainConst.ElevateButtonName}"
+                                        Margin="0,0,4,0"
+                                        Click="ElevateButton_Click">
+                                    <Button.Style>
+                                        <Style TargetType="Button"
+                                               BasedOn="{StaticResource MaterialDesignIconForegroundButton}">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Source={x:Static consts:GlobalConst.IsRunningWithAdminPermisson}}"
+                                                             Value="True">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                    <Viewbox Child="{mdix:PackIcon Administrator}"
+                                             Margin="1.5" />
+                                </Button>
+                                <mdix:PopupBox ToolTip="{x:Static consts:MainConst.OverflowPopupBoxToolTip}"
+                                               AutomationProperties.Name="{x:Static consts:MainConst.OverflowPopupBoxName}"
+                                               PopupVerticalOffset="-36">
+                                    <StackPanel>
+                                        <Button Content="{x:Static consts:MainConst.UpdateHostButtonContent}"
+                                                ToolTip="{x:Static consts:MainConst.UpdateHostButtonToolTip}"
+                                                VerticalContentAlignment="Center" Padding="16,0"
+                                                Click="UpdateHostButton_Click" />
+                                        <Button Content="{x:Static consts:MainConst.UpdateSoftwareButtonContent}"
+                                                ToolTip="{x:Static consts:MainConst.UpdateSoftwareButtonToolTip}"
+                                                VerticalContentAlignment="Center" Padding="16,0"
+                                                Click="UpdateSoftwareButton_Click" />
+                                    </StackPanel>
+                                </mdix:PopupBox>
+                            </StackPanel>
+                        </Viewbox>
+                    </Grid>
+                    <Grid Background="{DynamicResource MaterialDesign.Brush.Background}">
+                        <ContentPresenter Content="{TemplateBinding Content}" />
+                    </Grid>
+                </DockPanel>
+            </mdix:DialogHost>
+        </ControlTemplate>
+    </Window.Template>
 
-            <Button IsDefault="True"
-                    Grid.Column="0" Margin="5"
-                    Content="{x:Static consts:MainConst.BrowserButtonContent}"
-                    ToolTip="{x:Static consts:MainConst.BrowserButtonToolTip}"
-                    Click="LaunchButton_Click" PreviewMouseDown="LaunchButton_PreviewMouseDown">
-                <Button.IsEnabled>
-                    <MultiBinding Converter="{x:Static convs:MainConv.MainBrowserButtonIsEnabledConv}">
-                        <Binding Path="BrowserPath" />
-                        <Binding Path="ExtraArgs" />
-                    </MultiBinding>
-                </Button.IsEnabled>
-            </Button>
-            <Button x:Name="NginxButton"
-                    Grid.Column="1" Margin="5" d:Content="# # # #"
-                    Visibility="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainAdminControlVisibilityConv}}"
-                    Click="LaunchButton_Click" PreviewMouseDown="LaunchButton_PreviewMouseDown">
-                <Button.IsEnabled>
-                    <MultiBinding Converter="{x:Static convs:MainConv.MainNginxButtonIsEnabledConv}">
-                        <Binding Path="IsConginxExist" />
-                        <Binding Path="IsNginxExist" />
-                        <Binding Path="IsCoproxyIniting" />
-                        <Binding Path="IsNginxIniting" />
-                        <Binding Path="IsComihomoIniting" />
-                        <Binding Path="IsMihomoIniting" />
-                    </MultiBinding>
-                </Button.IsEnabled>
-                <Button.Content>
-                    <MultiBinding Converter="{x:Static convs:MainConv.MainNginxButtonContentConv}">
-                        <Binding Path="IsConginxRunning" />
-                        <Binding Path="IsNginxRunning" />
-                        <Binding Path="IsCoproxyIniting" />
-                        <Binding Path="IsNginxIniting" />
-                    </MultiBinding>
-                </Button.Content>
-                <Button.ToolTip>
-                    <MultiBinding Converter="{x:Static convs:MainConv.MainNginxButtonToolTipConv}">
-                        <Binding Path="IsConginxRunning" />
-                        <Binding Path="IsNginxRunning" />
-                    </MultiBinding>
-                </Button.ToolTip>
-            </Button>
-            <Button x:Name="MihomoButton"
-                    Grid.Column="2" Margin="5" d:Content="# # # #"
-                    Visibility="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainAdminControlVisibilityConv}}"
-                    ToolTip="{Binding IsMihomoRunning, Converter={x:Static convs:MainConv.MainMihomoButtonToolTipConv}}"
-                    Click="LaunchButton_Click" PreviewMouseDown="LaunchButton_PreviewMouseDown">
-                <Button.IsEnabled>
-                    <MultiBinding Converter="{x:Static convs:MainConv.MainMihomoButtonIsEnabledConv}">
-                        <Binding Path="IsComihomoExist" />
-                        <Binding Path="IsMihomoExist" />
-                        <Binding Path="IsCoproxyIniting" />
-                        <Binding Path="IsComihomoIniting" />
-                        <Binding Path="IsMihomoIniting" />
-                    </MultiBinding>
-                </Button.IsEnabled>
-                <Button.Content>
-                    <MultiBinding Converter="{x:Static convs:MainConv.MainMihomoButtonContentConv}">
-                        <Binding Path="IsMihomoRunning" />
-                        <Binding Path="IsComihomoIniting" />
-                        <Binding Path="IsMihomoIniting" />
-                        <Binding Path="IsCoproxyIniting" />
-                        <Binding Path="IsCoproxyStopping" />
-                    </MultiBinding>
-                </Button.Content>
-            </Button>
-        </Grid>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainProxyColumnWidthConv}}" />
-                <ColumnDefinition Width="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainProxyColumnWidthConv}}" />
-            </Grid.ColumnDefinitions>
+    <mdix:DrawerHost IsLeftDrawerOpen="{Binding IsFlyoutOpen}">
+        <mdix:DrawerHost.LeftDrawerContent>
+            <DockPanel Width="248">
+                <Separator DockPanel.Dock="Top" />
+                <mdix:Card Style="{StaticResource TopBarCard}"
+                           DockPanel.Dock="Top" mdix:ElevationAssist.Elevation="Dp2">
+                    <Grid Margin="8,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-            <Button x:Name="EditLocalHostButton"
-                    Grid.Column="0" Margin="5"
-                    Content="{x:Static consts:MainConst.EditLocalHostButtonContent}"
-                    ToolTip="{x:Static consts:MainConst.EditLocalHostButtonToolTip}"
-                    Click="EditHostButton_Click" />
-            <Button Grid.Column="1" Margin="5"
-                    Content="{x:Static consts:MainConst.EditUpstreamHostButtonContent}"
-                    ToolTip="{x:Static consts:MainConst.EditUpstreamHostButtonToolTip}"
-                    Click="EditHostButton_Click" />
-            <Button x:Name="EditNginxConfButton"
-                    Grid.Column="2" Margin="5"
-                    Visibility="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainAdminControlVisibilityConv}}"
-                    Content="{x:Static consts:MainConst.EditNginxConfButtonContent}"
-                    ToolTip="{x:Static consts:MainConst.EditNginxConfButtonToolTip}"
-                    Click="EditConfButton_Click">
-                <Button.IsEnabled>
-                    <MultiBinding Converter="{x:Static convs:MainConv.MainNginxButtonIsEnabledConv}">
-                        <Binding Path="IsConginxExist" />
-                        <Binding Path="IsNginxExist" />
-                        <Binding Path="IsCoproxyIniting" />
-                        <Binding Path="IsNginxIniting" />
-                        <Binding Path="IsComihomoIniting" />
-                        <Binding Path="IsMihomoIniting" />
-                    </MultiBinding>
-                </Button.IsEnabled>
-            </Button>
-            <Button Grid.Column="3" Margin="5"
-                    Visibility="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainAdminControlVisibilityConv}}"
-                    Content="{x:Static consts:MainConst.EditMihomoConfButtonContent}"
-                    ToolTip="{x:Static consts:MainConst.EditMihomoConfButtonToolTip}"
-                    Click="EditConfButton_Click">
-                <Button.IsEnabled>
-                    <MultiBinding Converter="{x:Static convs:MainConv.MainMihomoButtonIsEnabledConv}">
-                        <Binding Path="IsComihomoExist" />
-                        <Binding Path="IsMihomoExist" />
-                        <Binding Path="IsCoproxyIniting" />
-                        <Binding Path="IsComihomoIniting" />
-                        <Binding Path="IsMihomoIniting" />
-                    </MultiBinding>
-                </Button.IsEnabled>
-            </Button>
-        </Grid>
-        <Grid Grid.Row="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainProxyColumnWidthConv}}" />
-            </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding DownloadSpeed}"
+                                   Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,8,0" />
+                        <TextBlock Text="{Binding UploadSpeed}"
+                                   Grid.Column="1" HorizontalAlignment="Center" Margin="8,0,0,0" />
+                    </Grid>
+                </mdix:Card>
+                <ListBox SelectedItem="{Binding CurrentFlyoutItem}"
+                         Style="{StaticResource MaterialDesignNavigationPrimaryListBox}"
+                         Margin="4,6,2,0"
+                         SelectionChanged="FlyoutListBox_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate DataType="models:FlyoutItem">
+                            <StackPanel Orientation="Horizontal">
+                                <ContentPresenter Content="{Binding Icon}"
+                                                  VerticalAlignment="Center" Margin="8,0,16,0" />
+                                <TextBlock Text="{Binding Title}"
+                                           FontWeight="Medium" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
 
-            <Button Grid.Column="0" Margin="5" d:Content="# # # # # #"
-                    IsEnabled="{Binding UpstreamUrl, Converter={x:Static convs:MainConv.MainUpdateHostButtonIsEnabledConv}}"
-                    Content="{Binding IsUpstreamHostUtd, Converter={x:Static convs:MainConv.MainUpdateHostButtonContentConv}}"
-                    ToolTip="{x:Static consts:MainConst.UpdateUpstreamHostButtonToolTip}"
-                    Click="UpdateUpstreamHostButton_Click" />
-            <Button x:Name="EditHostsConfButton"
-                    Grid.Column="1" Margin="5"
-                    Visibility="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainAdminControlVisibilityConv}}"
-                    Content="{x:Static consts:MainConst.EditHostsConfButtonContent}"
-                    ToolTip="{x:Static consts:MainConst.EditHostsConfButtonToolTip}"
-                    Click="EditConfButton_Click" />
-        </Grid>
-        <Grid Grid.Row="4">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainProxyColumnWidthConv}}" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+                    <models:FlyoutItem x:Name="RulesFlyoutItem"
+                                       Title="{x:Static consts:GlobalConst.RulesFlyoutItemTitle}"
+                                       Icon="{mdix:PackIcon ViewList}"
+                                       Path="../Pages/RulesPage.xaml" />
+                    <models:FlyoutItem Title="{x:Static consts:GlobalConst.SettingsFlyoutItemTitle}"
+                                       Icon="{mdix:PackIcon Settings}"
+                                       Path="../Pages/SettingsPage.xaml" />
+                    <models:FlyoutItem Title="{x:Static consts:GlobalConst.ToolFlyoutItemTitle}"
+                                       Icon="{mdix:PackIcon Toolbox}"
+                                       Path="../Pages/ToolPage.xaml" />
+                    <models:FlyoutItem Title="{x:Static consts:GlobalConst.AboutFlyoutItemTitle}"
+                                       Icon="{mdix:PackIcon About}"
+                                       Path="../Pages/AboutPage.xaml" />
+                </ListBox>
+            </DockPanel>
+        </mdix:DrawerHost.LeftDrawerContent>
 
-            <Button Grid.Column="0" Margin="5"
-                    Content="{x:Static consts:MainConst.SettingsButtonContent}"
-                    ToolTip="{x:Static consts:MainConst.SettingsButtonToolTip}"
-                    Click="SettingsButton_Click" />
-            <Button Focusable="False"
-                    Grid.Column="1" Margin="5" d:Content="# # # #"
-                    Visibility="{Binding Source={x:Static consts:MainConst.IsAdmin}, Converter={x:Static convs:MainConv.MainAdminControlVisibilityConv}}"
-                    Content="{Binding IsFlashing, Converter={x:Static convs:MainConv.MainNoClickButtonContentConv}}"
-                    ToolTip="{Binding IsFlashing, Converter={x:Static convs:MainConv.MainNoClickButtonToolTipConv}}"
-                    Click="NoClickButton_Click" />
-            <Button Grid.Column="2" Margin="5"
-                    Content="{x:Static consts:MainConst.AboutButtonContent}"
-                    ToolTip="{x:Static consts:MainConst.AboutButtonToolTip}"
-                    Click="AboutButton_Click" />
-        </Grid>
-    </Grid>
+        <DockPanel>
+            <DockPanel.Resources>
+                <DataTemplate x:Key="BrowserBarContent" DataType="preses:MainPres">
+                    <Grid Margin="15.3,0,20,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ToggleButton IsChecked="{Binding IsExpandBarOpen}"
+                                      AutomationProperties.Name="{x:Static consts:MainConst.ExpandToggleButtonName}"
+                                      Grid.Column="0" Margin="0,4,12,4">
+                            <ToggleButton.Style>
+                                <Style TargetType="ToggleButton"
+                                       BasedOn="{StaticResource ExpandToggleButton}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsExpandBarOpen}"
+                                                     Value="True">
+                                            <Setter Property="ToolTip"
+                                                    Value="{x:Static consts:MainConst.ExpandToggleButtonOpenToolTip}" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding TopBarArray[0]}"
+                                                     Value="0">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+
+                                    <Setter Property="ToolTip"
+                                            Value="{x:Static consts:MainConst.ExpandToggleButtonClosedToolTip}" />
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </Style>
+                            </ToggleButton.Style>
+                        </ToggleButton>
+                        <Button ContentTemplate="{StaticResource PinIcon}"
+                                ToolTip="{x:Static consts:MainConst.PinButtonToolTip}"
+                                AutomationProperties.Name="{x:Static consts:MainConst.PinButtonName}"
+                                Grid.Column="0" Margin="2.5,4,14.7,4"
+                                Click="BrowserPinButton_Click">
+                            <Button.Style>
+                                <Style TargetType="Button"
+                                       BasedOn="{StaticResource MaterialDesignToolForegroundButton}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding TopBarArray[0]}"
+                                                     Value="0">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+
+                        <TextBlock Text="{x:Static consts:MainConst.BrowserBarTextBlockText}"
+                                   ToolTip="{x:Static consts:MainConst.BrowserBarTextBlockToolTip}"
+                                   Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
+                                   ToolTipService.InitialShowDelay="0" mdix:TextBlockAssist.AutoToolTip="False" Cursor="Help"
+                                   Grid.Column="1" Margin="0,0,12,0" />
+                        <TextBlock Text="{Binding BrowserStatusMessage}"
+                                   Grid.Column="2" Margin="0,0,12,0" />
+                        <Button AutomationProperties.Name="{x:Static consts:MainConst.LaunchButtonName}"
+                                Grid.Column="3"
+                                Click="BrowserLaunchButton_Click">
+                            <Button.Style>
+                                <Style TargetType="Button"
+                                       BasedOn="{StaticResource SmallImageButton}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding BrowserStatus}"
+                                                     Value="{x:Static models:ProcessStatus.On}">
+                                            <Setter Property="Content"
+                                                    Value="{mdix:PackIcon LightningBolt}" />
+                                            <Setter Property="ToolTip"
+                                                    Value="{x:Static consts:MainConst.LaunchButtonActiveToolTip}" />
+                                            <Setter Property="Background"
+                                                    Value="{DynamicResource MaterialDesign.Brush.Primary}" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding TopBarArray[0]}"
+                                                     Value="0">
+                                            <Setter Property="IsDefault" Value="True" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+
+                                    <Setter Property="Content"
+                                            Value="{mdix:PackIcon Play}" />
+                                    <Setter Property="ToolTip"
+                                            Value="{x:Static consts:MainConst.LaunchButtonInactiveToolTip}" />
+                                    <Setter Property="Background"
+                                            Value="{DynamicResource MaterialDesign.Brush.LaunchButton.InactiveBackground}" />
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+                <DataTemplate x:Key="NginxBarContent" DataType="preses:MainPres">
+                    <Grid Margin="15.3,0,20,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ToggleButton IsChecked="{Binding IsExpandBarOpen}"
+                                      AutomationProperties.Name="{x:Static consts:MainConst.ExpandToggleButtonName}"
+                                      Grid.Column="0" Margin="0,4,12,4">
+                            <ToggleButton.Style>
+                                <Style TargetType="ToggleButton"
+                                       BasedOn="{StaticResource ExpandToggleButton}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsExpandBarOpen}"
+                                                     Value="True">
+                                            <Setter Property="ToolTip"
+                                                    Value="{x:Static consts:MainConst.ExpandToggleButtonOpenToolTip}" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding TopBarArray[0]}"
+                                                     Value="1">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+
+                                    <Setter Property="ToolTip"
+                                            Value="{x:Static consts:MainConst.ExpandToggleButtonClosedToolTip}" />
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </Style>
+                            </ToggleButton.Style>
+                        </ToggleButton>
+                        <Button ContentTemplate="{StaticResource PinIcon}"
+                                ToolTip="{x:Static consts:MainConst.PinButtonToolTip}"
+                                AutomationProperties.Name="{x:Static consts:MainConst.PinButtonName}"
+                                Grid.Column="0" Margin="2.5,4,14.7,4"
+                                Click="NginxPinButton_Click">
+                            <Button.Style>
+                                <Style TargetType="Button"
+                                       BasedOn="{StaticResource MaterialDesignToolForegroundButton}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding TopBarArray[0]}"
+                                                     Value="1">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <TextBlock Text="{x:Static consts:MainConst.NginxBarTextBlockText}"
+                                   ToolTip="{x:Static consts:MainConst.NginxBarTextBlockToolTip}"
+                                   Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
+                                   ToolTipService.InitialShowDelay="0" mdix:TextBlockAssist.AutoToolTip="False" Cursor="Help"
+                                   Grid.Column="1" Margin="0,0,12,0" />
+                        <TextBlock Text="{Binding NginxStatusMessage}"
+                                   Grid.Column="2" Margin="0,0,12,0" />
+                        <Button AutomationProperties.Name="{x:Static consts:MainConst.LaunchButtonName}"
+                                Grid.Column="3"
+                                Click="NginxLaunchButton_Click">
+                            <Button.Style>
+                                <Style TargetType="Button"
+                                       BasedOn="{StaticResource SmallImageButton}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding NginxStatus}"
+                                                     Value="{x:Static models:ProcessStatus.Initing}">
+                                            <Setter Property="mdix:ButtonProgressAssist.IsIndicatorVisible" Value="True" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding NginxStatus}"
+                                                     Value="{x:Static models:ProcessStatus.On}">
+                                            <Setter Property="Content"
+                                                    Value="{mdix:PackIcon LightningBolt}" />
+                                            <Setter Property="ToolTip"
+                                                    Value="{x:Static consts:MainConst.LaunchButtonActiveToolTip}" />
+                                            <Setter Property="Background"
+                                                    Value="{DynamicResource MaterialDesign.Brush.Primary}" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding TopBarArray[0]}"
+                                                     Value="1">
+                                            <Setter Property="IsDefault" Value="True" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+
+                                    <Setter Property="Content"
+                                            Value="{mdix:PackIcon Play}" />
+                                    <Setter Property="ToolTip"
+                                            Value="{x:Static consts:MainConst.LaunchButtonInactiveToolTip}" />
+                                    <Setter Property="Background"
+                                            Value="{DynamicResource MaterialDesign.Brush.LaunchButton.InactiveBackground}" />
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+                <DataTemplate x:Key="ClashBarContent" DataType="preses:MainPres">
+                    <Grid Margin="15.3,0,20,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ToggleButton IsChecked="{Binding IsExpandBarOpen}"
+                                      AutomationProperties.Name="{x:Static consts:MainConst.ExpandToggleButtonName}"
+                                      Grid.Column="0" Margin="0,4,12,4">
+                            <ToggleButton.Style>
+                                <Style TargetType="ToggleButton"
+                                       BasedOn="{StaticResource ExpandToggleButton}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsExpandBarOpen}"
+                                                     Value="True">
+                                            <Setter Property="ToolTip"
+                                                    Value="{x:Static consts:MainConst.ExpandToggleButtonOpenToolTip}" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding TopBarArray[0]}"
+                                                     Value="2">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+
+                                    <Setter Property="ToolTip"
+                                            Value="{x:Static consts:MainConst.ExpandToggleButtonClosedToolTip}" />
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </Style>
+                            </ToggleButton.Style>
+                        </ToggleButton>
+                        <Button ContentTemplate="{StaticResource PinIcon}"
+                                ToolTip="{x:Static consts:MainConst.PinButtonToolTip}"
+                                AutomationProperties.Name="{x:Static consts:MainConst.PinButtonName}"
+                                Grid.Column="0" Margin="2.5,4,14.7,4"
+                                Click="ClashPinButton_Click">
+                            <Button.Style>
+                                <Style TargetType="Button"
+                                       BasedOn="{StaticResource MaterialDesignToolForegroundButton}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding TopBarArray[0]}"
+                                                     Value="2">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <TextBlock Text="{x:Static consts:MainConst.ClashBarTextBlockText}"
+                                   ToolTip="{x:Static consts:MainConst.ClashBarTextBlockToolTip}"
+                                   Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
+                                   ToolTipService.InitialShowDelay="0" mdix:TextBlockAssist.AutoToolTip="False" Cursor="Help"
+                                   Grid.Column="1" Margin="0,0,12,0" />
+                        <TextBlock Text="{Binding ClashStatusMessage}"
+                                   Grid.Column="2" Margin="0,0,12,0" />
+                        <Button AutomationProperties.Name="{x:Static consts:MainConst.LaunchButtonName}"
+                                Grid.Column="3"
+                                Click="ClashLaunchButton_Click">
+                            <Button.Style>
+                                <Style TargetType="Button"
+                                       BasedOn="{StaticResource SmallImageButton}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ClashStatus}"
+                                                     Value="{x:Static models:ProcessStatus.Initing}">
+                                            <Setter Property="mdix:ButtonProgressAssist.IsIndicatorVisible" Value="True" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding ClashStatus}"
+                                                     Value="{x:Static models:ProcessStatus.On}">
+                                            <Setter Property="Content"
+                                                    Value="{mdix:PackIcon LightningBolt}" />
+                                            <Setter Property="ToolTip"
+                                                    Value="{x:Static consts:MainConst.LaunchButtonActiveToolTip}" />
+                                            <Setter Property="Background"
+                                                    Value="{DynamicResource MaterialDesign.Brush.Primary}" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding TopBarArray[0]}"
+                                                     Value="2">
+                                            <Setter Property="IsDefault" Value="True" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+
+                                    <Setter Property="Content"
+                                            Value="{mdix:PackIcon Play}" />
+                                    <Setter Property="ToolTip"
+                                            Value="{x:Static consts:MainConst.LaunchButtonInactiveToolTip}" />
+                                    <Setter Property="Background"
+                                            Value="{DynamicResource MaterialDesign.Brush.LaunchButton.InactiveBackground}" />
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+            </DockPanel.Resources>
+
+            <Separator DockPanel.Dock="Top" />
+            <mdix:Card Content="{Binding}"
+                       DockPanel.Dock="Top">
+                <mdix:Card.Style>
+                    <Style TargetType="mdix:Card"
+                           BasedOn="{StaticResource TopBarCard}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding TopBarArray[0]}"
+                                         Value="1">
+                                <Setter Property="ContentTemplate"
+                                        Value="{StaticResource NginxBarContent}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding TopBarArray[0]}"
+                                         Value="2">
+                                <Setter Property="ContentTemplate"
+                                        Value="{StaticResource ClashBarContent}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+
+                        <Setter Property="ContentTemplate"
+                                Value="{StaticResource BrowserBarContent}" />
+                    </Style>
+                </mdix:Card.Style>
+            </mdix:Card>
+            <mdix:DrawerHost OpenMode="Standard"
+                             IsTopDrawerOpen="{Binding IsExpandBarOpen}">
+                <mdix:DrawerHost.TopDrawerContent>
+                    <StackPanel>
+                        <Separator />
+                        <mdix:Card Content="{Binding}">
+                            <mdix:Card.Style>
+                                <Style TargetType="mdix:Card"
+                                       BasedOn="{StaticResource TopBarCard}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding TopBarArray[1]}"
+                                                     Value="0">
+                                            <Setter Property="ContentTemplate"
+                                                    Value="{StaticResource BrowserBarContent}" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding TopBarArray[1]}"
+                                                     Value="2">
+                                            <Setter Property="ContentTemplate"
+                                                    Value="{StaticResource ClashBarContent}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+
+                                    <Setter Property="ContentTemplate"
+                                            Value="{StaticResource NginxBarContent}" />
+                                </Style>
+                            </mdix:Card.Style>
+                        </mdix:Card>
+                        <Separator />
+                        <mdix:Card Content="{Binding}">
+                            <mdix:Card.Style>
+                                <Style TargetType="mdix:Card"
+                                       BasedOn="{StaticResource TopBarCard}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding TopBarArray[2]}"
+                                                     Value="0">
+                                            <Setter Property="ContentTemplate"
+                                                    Value="{StaticResource BrowserBarContent}" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding TopBarArray[2]}"
+                                                     Value="1">
+                                            <Setter Property="ContentTemplate"
+                                                    Value="{StaticResource NginxBarContent}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+
+                                    <Setter Property="ContentTemplate"
+                                            Value="{StaticResource ClashBarContent}" />
+                                </Style>
+                            </mdix:Card.Style>
+                        </mdix:Card>
+                    </StackPanel>
+                </mdix:DrawerHost.TopDrawerContent>
+
+                <Grid>
+                    <ProgressBar Value="{Binding StatusProgress}"
+                                 VerticalAlignment="Top">
+                        <ProgressBar.Style>
+                            <Style TargetType="ProgressBar">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding StatusProgress}"
+                                                 Value="100">
+                                        <Setter Property="Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ProgressBar.Style>
+                    </ProgressBar>
+                    <Frame Source="{Binding CurrentFlyoutItem.Path}"
+                           Navigated="PageFrame_Navigated" />
+                    <mdix:Snackbar MessageQueue="{Binding SnackbarMessageQueue}" />
+                </Grid>
+            </mdix:DrawerHost>
+        </DockPanel>
+    </mdix:DrawerHost>
 </Window>

@@ -97,49 +97,175 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColorsButtonContent" xml:space="preserve">
-    <value>SWT. Color (Fully Random)</value>
+  <data name="AlwaysAdminEnabledSettingsItemContent" xml:space="preserve">
+    <value>Control whether to run software as admin everytime on startup</value>
   </data>
-  <data name="ColorsButtonToolTip" xml:space="preserve">
-    <value>Click to switch colors</value>
+  <data name="AlwaysAdminEnabledSettingsItemTitle" xml:space="preserve">
+    <value>Run Software As Admin</value>
   </data>
-  <data name="LangsButtonChineseLangContent" xml:space="preserve">
-    <value>Switch Lang (中文 → En)</value>
+  <data name="AlwaysAdminEnabledToggleButtonToolTip" xml:space="preserve">
+    <value>Click to toggle the always run software as admin feature on / off</value>
   </data>
-  <data name="LangsButtonEnglishLangContent" xml:space="preserve">
-    <value>Switch Lang (En → Auto)</value>
+  <data name="BrowserPathComboBoxHint" xml:space="preserve">
+    <value>Select a Chromium-based browser</value>
   </data>
-  <data name="LangsButtonInheritLangContent" xml:space="preserve">
-    <value>Switch Lang (Auto → 中文)</value>
+  <data name="BrowserPathComboBoxToolTip" xml:space="preserve">
+    <value>Click to select a browser path</value>
   </data>
-  <data name="LangsButtonToolTip" xml:space="preserve">
-    <value>Click to switch langs</value>
+  <data name="BrowserPathSettingsItemContent" xml:space="preserve">
+    <value>Select a browser path used for browser cealing (exe extension)</value>
   </data>
-  <data name="ThemesButtonDarkThemeContent" xml:space="preserve">
-    <value>SWT. Theme (Dark → Light)</value>
+  <data name="BrowserPathSettingsItemTitle" xml:space="preserve">
+    <value>Browser Path</value>
   </data>
-  <data name="ThemesButtonInheritThemeContent" xml:space="preserve">
-    <value>SWT. Theme (Auto → Dark)</value>
+  <data name="ClashConfButtonName" xml:space="preserve">
+    <value>Edit</value>
   </data>
-  <data name="ThemesButtonLightThemeContent" xml:space="preserve">
-    <value>SWT. Theme (Light → Auto)</value>
+  <data name="ClashConfButtonToolTip" xml:space="preserve">
+    <value>Click to edit the additional Clash conf</value>
   </data>
-  <data name="ThemesButtonToolTip" xml:space="preserve">
-    <value>Click to switch themes</value>
+  <data name="ClashConfSettingsItemContent" xml:space="preserve">
+    <value>Edit the additional config in config.yaml used for global cealing. Detailed instructions refer to Clash Meta docs (Optional)</value>
   </data>
-  <data name="WeightsButtonBoldWeightContent" xml:space="preserve">
-    <value>SWT. Weight (Bold → Light)</value>
+  <data name="ClashConfSettingsItemTitle" xml:space="preserve">
+    <value>Clash Conf</value>
   </data>
-  <data name="WeightsButtonLightWeightContent" xml:space="preserve">
-    <value>SWT. Weight (Light → Regular)</value>
+  <data name="ExtraArgsSettingsItemContent" xml:space="preserve">
+    <value>Add the additional Chromium startup args used for browser cealing (Separated by spaces)</value>
   </data>
-  <data name="WeightsButtonRegularWeightContent" xml:space="preserve">
-    <value>SWT. Weight (RGL. → Bold)</value>
+  <data name="ExtraArgsSettingsItemTitle" xml:space="preserve">
+    <value>Browser Args</value>
   </data>
-  <data name="WeightsButtonToolTip" xml:space="preserve">
-    <value>Click to switch font weights</value>
+  <data name="ExtraArgsTextBoxHint" xml:space="preserve">
+    <value>Extra startup args (Optional)</value>
   </data>
-  <data name="_ChangeLangSuccessMsg" xml:space="preserve">
-    <value>Switch successfuly, restart to refresh the windows</value>
+  <data name="ExtraArgsTextBoxToolTip" xml:space="preserve">
+    <value>Click to add the additional browser startup args</value>
+  </data>
+  <data name="HostsConfButtonName" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="HostsConfButtonToolTip" xml:space="preserve">
+    <value>Click to edit the Hosts conf</value>
+  </data>
+  <data name="HostsConfSettingsItemContent" xml:space="preserve">
+    <value>Edit the system Hosts used for local DNS resolution (Taking effect upon saving)</value>
+  </data>
+  <data name="HostsConfSettingsItemTitle" xml:space="preserve">
+    <value>Hosts Conf</value>
+  </data>
+  <data name="KeepRunningEnabledSettingsItemContent" xml:space="preserve">
+    <value>Control whether to keep program running after starting browser cealing (The browser may fail to launch if this option is disabled)</value>
+  </data>
+  <data name="KeepRunningEnabledSettingsItemTitle" xml:space="preserve">
+    <value>Keep Program Running</value>
+  </data>
+  <data name="KeepRunningEnabledToggleButtonToolTip" xml:space="preserve">
+    <value>Click to toggle the keep program running behavior on / off</value>
+  </data>
+  <data name="LangOptionComboBoxHint" xml:space="preserve">
+    <value>Select a UI l10n language</value>
+  </data>
+  <data name="LangOptionComboBoxToolTip" xml:space="preserve">
+    <value>Click to select a l10n language</value>
+  </data>
+  <data name="LangOptionSettingsItemTitle" xml:space="preserve">
+    <value>Lang L10n</value>
+  </data>
+  <data name="NginxConfButtonName" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="NginxConfButtonToolTip" xml:space="preserve">
+    <value>Click to edit the additional Nginx conf</value>
+  </data>
+  <data name="NginxConfSettingsItemContent" xml:space="preserve">
+    <value>Edit the additional config in nginx.conf used for global cealing. Detailed instructions refer to Nginx docs (Optional)</value>
+  </data>
+  <data name="NginxConfSettingsItemTitle" xml:space="preserve">
+    <value>Nginx Conf</value>
+  </data>
+  <data name="SpeedMonitorEnabledSettingsItemContent" xml:space="preserve">
+    <value>Control whether to enable the traffic speed monitor feature</value>
+  </data>
+  <data name="SpeedMonitorEnabledSettingsItemTitle" xml:space="preserve">
+    <value>Traffic Speed Monitor</value>
+  </data>
+  <data name="SpeedMonitorEnabledToggleButtonToolTip" xml:space="preserve">
+    <value>Click to toggle the traffic speed monitor feature on / off</value>
+  </data>
+  <data name="ThemeColorComboBoxHint" xml:space="preserve">
+    <value>Select a UI color flavor</value>
+  </data>
+  <data name="ThemeColorComboBoxToolTip" xml:space="preserve">
+    <value>Click to select a flavor color</value>
+  </data>
+  <data name="ThemeColorSettingsItemTitle" xml:space="preserve">
+    <value>Flavor Color</value>
+  </data>
+  <data name="ThemeStateComboBoxHint" xml:space="preserve">
+    <value>Select a UI theme state</value>
+  </data>
+  <data name="ThemeStateComboBoxToolTip" xml:space="preserve">
+    <value>Click to select a theme state</value>
+  </data>
+  <data name="ThemeStateSettingsItemTitle" xml:space="preserve">
+    <value>Theme State</value>
+  </data>
+  <data name="UpdateHostEnabledSettingsItemContent" xml:space="preserve">
+    <value>Control whether to check host for update automatically on startup</value>
+  </data>
+  <data name="UpdateHostEnabledSettingsItemTitle" xml:space="preserve">
+    <value>Check Host For Update</value>
+  </data>
+  <data name="UpdateHostEnabledToggleButtonToolTip" xml:space="preserve">
+    <value>Click to toggle the auto check host for update feature on / off</value>
+  </data>
+  <data name="UpdateSoftwareEnabledSettingsItemContent" xml:space="preserve">
+    <value>Control whether to check software for update automatically on startup</value>
+  </data>
+  <data name="UpdateSoftwareEnabledSettingsItemTitle" xml:space="preserve">
+    <value>Check Software For Update</value>
+  </data>
+  <data name="UpdateSoftwareEnabledToggleButtonToolTip" xml:space="preserve">
+    <value>Click to toggle the auto check software for update feature on / off</value>
+  </data>
+  <data name="UpstreamMirrorEnabledSettingsItemContent" xml:space="preserve">
+    <value>Control whether to use mirror to update automatically if host update fails (Only available for Github or Gitlab host source)</value>
+  </data>
+  <data name="UpstreamMirrorEnabledSettingsItemTitle" xml:space="preserve">
+    <value>Select Host Source Mirror</value>
+  </data>
+  <data name="UpstreamMirrorEnabledToggleButtonToolTip" xml:space="preserve">
+    <value>Click to toggle the auto select host source mirror feature on / off</value>
+  </data>
+  <data name="UpstreamUrlSettingsItemContent" xml:space="preserve">
+    <value>Edit the upstream host source link used for host update (using built-in host by default)</value>
+  </data>
+  <data name="UpstreamUrlSettingsItemTitle" xml:space="preserve">
+    <value>Host Source</value>
+  </data>
+  <data name="UpstreamUrlTextBoxToolTip" xml:space="preserve">
+    <value>Click to edit the upstream host updating source</value>
+  </data>
+  <data name="_BrowserPathExtensionInvalidValidationContent" xml:space="preserve">
+    <value>File extention invalid</value>
+  </data>
+  <data name="_BrowserPathFileInvalidValidationContent" xml:space="preserve">
+    <value>File not found</value>
+  </data>
+  <data name="_ExtraArgsInvalidValidationContent" xml:space="preserve">
+    <value>Args format invalid</value>
+  </data>
+  <data name="_UpstreamUrlInvalidValidationContent" xml:space="preserve">
+    <value>Url format invalid</value>
+  </data>
+  <data name="ClashHostsEnabledSettingsItemTitle" xml:space="preserve">
+    <value>Wildcard Domain Cealing</value>
+  </data>
+  <data name="ClashHostsEnabledSettingsItemContent" xml:space="preserve">
+    <value>Control whether to use Clash instead of Hosts to enable wildcard domain matching on global cealing (Global cealing will not match any subdomain other than www for rules beginning with a wildcard if this option is disabled)</value>
+  </data>
+  <data name="ClashHostsEnabledToggleButtonToolTip" xml:space="preserve">
+    <value>Click to toggle the wildcard domain cealing feature on / off</value>
   </data>
 </root>

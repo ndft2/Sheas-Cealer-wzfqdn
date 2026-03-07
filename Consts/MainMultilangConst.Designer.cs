@@ -19,7 +19,7 @@ namespace Sheas_Cealer.Consts {
     // 类通过类似于 ResGen 或 Visual Studio 的工具自动生成的。
     // 若要添加或移除成员，请编辑 .ResX 文件，然后重新运行 ResGen
     // (以 /str 作为命令选项)，或重新生成 VS 项目。
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class MainMultilangConst {
@@ -70,11 +70,38 @@ namespace Sheas_Cealer.Consts {
         }
         
         /// <summary>
+        ///   查找类似 All processes of the selected browser will be closed before launching. Do you want to continue? 的本地化字符串。
+        /// </summary>
+        public static string _BrowserProcessKillPrompt {
+            get {
+                return ResourceManager.GetString("_BrowserProcessKillPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Some cealing hosts contain syntax errors and cannot be recognized. Do you want to continue anyway? 的本地化字符串。
         /// </summary>
-        public static string _CealHostErrorPrompt {
+        public static string _CealHostInvalidMsg {
             get {
-                return ResourceManager.GetString("_CealHostErrorPrompt", resourceCulture);
+                return ResourceManager.GetString("_CealHostInvalidMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 The clash conf contains syntax errors and cannot be recognized. Do you want to continue anyway? 的本地化字符串。
+        /// </summary>
+        public static string _ClashConfInvalidMsg {
+            get {
+                return ResourceManager.GetString("_ClashConfInvalidMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Clash failed to launch 的本地化字符串。
+        /// </summary>
+        public static string _ClashLaunchErrorMsg {
+            get {
+                return ResourceManager.GetString("_ClashLaunchErrorMsg", resourceCulture);
             }
         }
         
@@ -142,83 +169,47 @@ namespace Sheas_Cealer.Consts {
         }
         
         /// <summary>
-        ///   查找类似 All processes of the selected browser will be closed before launching. Do you want to continue? 的本地化字符串。
+        ///   查找类似 The nginx conf contains syntax errors and cannot be recognized. Do you want to continue anyway? 的本地化字符串。
         /// </summary>
-        public static string _KillBrowserProcessPrompt {
+        public static string _NginxConfInvalidMsg {
             get {
-                return ResourceManager.GetString("_KillBrowserProcessPrompt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 You are using hosts-based non-wildcard domain global cealing. Do you want to continue? 的本地化字符串。
-        /// </summary>
-        public static string _LaunchHostsNginxPrompt {
-            get {
-                return ResourceManager.GetString("_LaunchHostsNginxPrompt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Mihomo failed to launch 的本地化字符串。
-        /// </summary>
-        public static string _LaunchMihomoErrorMsg {
-            get {
-                return ResourceManager.GetString("_LaunchMihomoErrorMsg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Nginx failed to launch. Do you want to open the error log? 的本地化字符串。
-        /// </summary>
-        public static string _LaunchNginxErrorPrompt {
-            get {
-                return ResourceManager.GetString("_LaunchNginxErrorPrompt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Warning: The proxy core is under attack and failes to conceal SNI. The SNI removal mode has been turned on urgently. Do you want to continue? 的本地化字符串。
-        /// </summary>
-        public static string _LaunchNginxFlashingPrompt {
-            get {
-                return ResourceManager.GetString("_LaunchNginxFlashingPrompt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Please remember to come back and stop the proxy manually after use. Do you want to continue? 的本地化字符串。
-        /// </summary>
-        public static string _LaunchProxyPrompt {
-            get {
-                return ResourceManager.GetString("_LaunchProxyPrompt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 The mihomo conf contains syntax errors and cannot be recognized 的本地化字符串。
-        /// </summary>
-        public static string _MihomoConfErrorMsg {
-            get {
-                return ResourceManager.GetString("_MihomoConfErrorMsg", resourceCulture);
+                return ResourceManager.GetString("_NginxConfInvalidMsg", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 The local port 80 is occupied. Do you want to use port {0} to continue? This may cause the http connection to fail to automatically jump to https 的本地化字符串。
         /// </summary>
-        public static string _NginxHttpPortOccupiedPrompt {
+        public static string _NginxHttpPortOccupiedMsg {
             get {
-                return ResourceManager.GetString("_NginxHttpPortOccupiedPrompt", resourceCulture);
+                return ResourceManager.GetString("_NginxHttpPortOccupiedMsg", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 The local port 443 is occupied. Do you want to use port {0} to continue? This may cause the global cealing to not work properly 的本地化字符串。
         /// </summary>
-        public static string _NginxHttpsPortOccupiedPrompt {
+        public static string _NginxHttpsPortOccupiedMsg {
             get {
-                return ResourceManager.GetString("_NginxHttpsPortOccupiedPrompt", resourceCulture);
+                return ResourceManager.GetString("_NginxHttpsPortOccupiedMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Nginx failed to launch. Do you want to open the error log? 的本地化字符串。
+        /// </summary>
+        public static string _NginxLaunchErrorPrompt {
+            get {
+                return ResourceManager.GetString("_NginxLaunchErrorPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Warning: The proxy core is under attack and failes to conceal SNI. The SNI removal mode has been turned on urgently. Do you want to continue? 的本地化字符串。
+        /// </summary>
+        public static string _NginxLaunchFlashingPrompt {
+            get {
+                return ResourceManager.GetString("_NginxLaunchFlashingPrompt", resourceCulture);
             }
         }
         
@@ -228,6 +219,15 @@ namespace Sheas_Cealer.Consts {
         public static string _OverrideUpstreamHostPrompt {
             get {
                 return ResourceManager.GetString("_OverrideUpstreamHostPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Please remember to come back and stop the proxy manually after use. Do you want to continue? 的本地化字符串。
+        /// </summary>
+        public static string _ProxyLaunchPrompt {
+            get {
+                return ResourceManager.GetString("_ProxyLaunchPrompt", resourceCulture);
             }
         }
         
@@ -268,6 +268,24 @@ namespace Sheas_Cealer.Consts {
         }
         
         /// <summary>
+        ///   查找类似 Browser Cealing 的本地化字符串。
+        /// </summary>
+        public static string BrowserBarTextBlockText {
+            get {
+                return ResourceManager.GetString("BrowserBarTextBlockText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Injecting startup args to conceal SNI extensions of the selected browser&apos;s traffic. Browsers with Chromium version 141.0.7356.0 or above are not supported. Rules beginning with $ or ^ are ignored 的本地化字符串。
+        /// </summary>
+        public static string BrowserBarTextBlockToolTip {
+            get {
+                return ResourceManager.GetString("BrowserBarTextBlockToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Start Cealing 的本地化字符串。
         /// </summary>
         public static string BrowserButtonContent {
@@ -286,11 +304,92 @@ namespace Sheas_Cealer.Consts {
         }
         
         /// <summary>
+        ///   查找类似 Cealer 的本地化字符串。
+        /// </summary>
+        public static string CealerLabelText {
+            get {
+                return ResourceManager.GetString("CealerLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Global Purging 的本地化字符串。
+        /// </summary>
+        public static string ClashBarTextBlockText {
+            get {
+                return ResourceManager.GetString("ClashBarTextBlockText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Use Clash TUN + DoH to resolve DNS queries of system-wide traffic against DNS pollution. Cealing host is not used in this feature 的本地化字符串。
+        /// </summary>
+        public static string ClashBarTextBlockToolTip {
+            get {
+                return ResourceManager.GetString("ClashBarTextBlockToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 GLB. Purging INIT. 的本地化字符串。
+        /// </summary>
+        public static string ClashButtonIsInitingContent {
+            get {
+                return ResourceManager.GetString("ClashButtonIsInitingContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Stop GLB. Purging 的本地化字符串。
+        /// </summary>
+        public static string ClashButtonIsRunningContent {
+            get {
+                return ResourceManager.GetString("ClashButtonIsRunningContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to stop the local Clash 的本地化字符串。
+        /// </summary>
+        public static string ClashButtonIsRunningToolTip {
+            get {
+                return ResourceManager.GetString("ClashButtonIsRunningToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Start GLB. Purging 的本地化字符串。
+        /// </summary>
+        public static string ClashButtonIsStoppedContent {
+            get {
+                return ResourceManager.GetString("ClashButtonIsStoppedContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to launch a local Clash 的本地化字符串。
+        /// </summary>
+        public static string ClashButtonIsStoppedToolTip {
+            get {
+                return ResourceManager.GetString("ClashButtonIsStoppedToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 GLB. Purging STP. 的本地化字符串。
+        /// </summary>
+        public static string ClashButtonIsStoppingContent {
+            get {
+                return ResourceManager.GetString("ClashButtonIsStoppingContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 GLB. Purging CHA. 的本地化字符串。
         /// </summary>
-        public static string ComihomoButtonIsInitingContent {
+        public static string CoclashButtonIsInitingContent {
             get {
-                return ResourceManager.GetString("ComihomoButtonIsInitingContent", resourceCulture);
+                return ResourceManager.GetString("CoclashButtonIsInitingContent", resourceCulture);
             }
         }
         
@@ -304,146 +403,137 @@ namespace Sheas_Cealer.Consts {
         }
         
         /// <summary>
-        ///   查找类似 Edit Hosts Conf 的本地化字符串。
+        ///   查找类似 Elevate 的本地化字符串。
         /// </summary>
-        public static string EditHostsConfButtonContent {
+        public static string ElevateButtonName {
             get {
-                return ResourceManager.GetString("EditHostsConfButtonContent", resourceCulture);
+                return ResourceManager.GetString("ElevateButtonName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Click to edit hosts conf 的本地化字符串。
+        ///   查找类似 Click to restart as admin 的本地化字符串。
         /// </summary>
-        public static string EditHostsConfButtonToolTip {
+        public static string ElevateButtonToolTip {
             get {
-                return ResourceManager.GetString("EditHostsConfButtonToolTip", resourceCulture);
+                return ResourceManager.GetString("ElevateButtonToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Edit Local Host 的本地化字符串。
+        ///   查找类似 Click to expand extention bar 的本地化字符串。
         /// </summary>
-        public static string EditLocalHostButtonContent {
+        public static string ExpandToggleButtonClosedToolTip {
             get {
-                return ResourceManager.GetString("EditLocalHostButtonContent", resourceCulture);
+                return ResourceManager.GetString("ExpandToggleButtonClosedToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Click to edit local host 的本地化字符串。
+        ///   查找类似 Expand 的本地化字符串。
         /// </summary>
-        public static string EditLocalHostButtonToolTip {
+        public static string ExpandToggleButtonName {
             get {
-                return ResourceManager.GetString("EditLocalHostButtonToolTip", resourceCulture);
+                return ResourceManager.GetString("ExpandToggleButtonName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Edit Mihomo Conf 的本地化字符串。
+        ///   查找类似 Click to collapse extention bar 的本地化字符串。
         /// </summary>
-        public static string EditMihomoConfButtonContent {
+        public static string ExpandToggleButtonOpenToolTip {
             get {
-                return ResourceManager.GetString("EditMihomoConfButtonContent", resourceCulture);
+                return ResourceManager.GetString("ExpandToggleButtonOpenToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Click to edit mihomo conf 的本地化字符串。
+        ///   查找类似 Github 的本地化字符串。
         /// </summary>
-        public static string EditMihomoConfButtonToolTip {
+        public static string GithubButtonName {
             get {
-                return ResourceManager.GetString("EditMihomoConfButtonToolTip", resourceCulture);
+                return ResourceManager.GetString("GithubButtonName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Edit Nginx Conf 的本地化字符串。
+        ///   查找类似 Click to open my github repo 的本地化字符串。
         /// </summary>
-        public static string EditNginxConfButtonContent {
+        public static string GithubButtonToolTip {
             get {
-                return ResourceManager.GetString("EditNginxConfButtonContent", resourceCulture);
+                return ResourceManager.GetString("GithubButtonToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Click to edit nginx conf 的本地化字符串。
+        ///   查找类似 Click to open navigation drawer 的本地化字符串。
         /// </summary>
-        public static string EditNginxConfButtonToolTip {
+        public static string HumburgerToggleButtonClosedToolTip {
             get {
-                return ResourceManager.GetString("EditNginxConfButtonToolTip", resourceCulture);
+                return ResourceManager.GetString("HumburgerToggleButtonClosedToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Edit UPSTR. Host 的本地化字符串。
+        ///   查找类似 Navigation 的本地化字符串。
         /// </summary>
-        public static string EditUpstreamHostButtonContent {
+        public static string HumburgerToggleButtonName {
             get {
-                return ResourceManager.GetString("EditUpstreamHostButtonContent", resourceCulture);
+                return ResourceManager.GetString("HumburgerToggleButtonName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Click to edit upstream host 的本地化字符串。
+        ///   查找类似 Click to close navigation drawer 的本地化字符串。
         /// </summary>
-        public static string EditUpstreamHostButtonToolTip {
+        public static string HumburgerToggleButtonOpenToolTip {
             get {
-                return ResourceManager.GetString("EditUpstreamHostButtonToolTip", resourceCulture);
+                return ResourceManager.GetString("HumburgerToggleButtonOpenToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 GLB. Purging INIT. 的本地化字符串。
+        ///   查找类似 Click to stop global cealing 的本地化字符串。
         /// </summary>
-        public static string MihomoButtonIsInitingContent {
+        public static string LaunchButtonActiveToolTip {
             get {
-                return ResourceManager.GetString("MihomoButtonIsInitingContent", resourceCulture);
+                return ResourceManager.GetString("LaunchButtonActiveToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Stop GLB. Purging 的本地化字符串。
+        ///   查找类似 Click to start global cealing 的本地化字符串。
         /// </summary>
-        public static string MihomoButtonIsRunningContent {
+        public static string LaunchButtonInactiveToolTip {
             get {
-                return ResourceManager.GetString("MihomoButtonIsRunningContent", resourceCulture);
+                return ResourceManager.GetString("LaunchButtonInactiveToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Click to stop the local Mihomo 的本地化字符串。
+        ///   查找类似 Launch 的本地化字符串。
         /// </summary>
-        public static string MihomoButtonIsRunningToolTip {
+        public static string LaunchButtonName {
             get {
-                return ResourceManager.GetString("MihomoButtonIsRunningToolTip", resourceCulture);
+                return ResourceManager.GetString("LaunchButtonName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Start GLB. Purging 的本地化字符串。
+        ///   查找类似 Global Cealing 的本地化字符串。
         /// </summary>
-        public static string MihomoButtonIsStoppedContent {
+        public static string NginxBarTextBlockText {
             get {
-                return ResourceManager.GetString("MihomoButtonIsStoppedContent", resourceCulture);
+                return ResourceManager.GetString("NginxBarTextBlockText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 Click to launch a local Mihomo 的本地化字符串。
+        ///   查找类似 Use Nginx local reverse proxy to conceal SNI extensions of system-wide traffic. Fragment is not supported. Wildcards not at the beginning of the rules are ignored. Rules beginning with # % or ^ are ignored 的本地化字符串。
         /// </summary>
-        public static string MihomoButtonIsStoppedToolTip {
+        public static string NginxBarTextBlockToolTip {
             get {
-                return ResourceManager.GetString("MihomoButtonIsStoppedToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 GLB. Purging STP. 的本地化字符串。
-        /// </summary>
-        public static string MihomoButtonIsStoppingContent {
-            get {
-                return ResourceManager.GetString("MihomoButtonIsStoppingContent", resourceCulture);
+                return ResourceManager.GetString("NginxBarTextBlockToolTip", resourceCulture);
             }
         }
         
@@ -525,6 +615,42 @@ namespace Sheas_Cealer.Consts {
         public static string NoClickButtonIsStoppedToolTip {
             get {
                 return ResourceManager.GetString("NoClickButtonIsStoppedToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 More 的本地化字符串。
+        /// </summary>
+        public static string OverflowPopupBoxName {
+            get {
+                return ResourceManager.GetString("OverflowPopupBoxName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to open more options 的本地化字符串。
+        /// </summary>
+        public static string OverflowPopupBoxToolTip {
+            get {
+                return ResourceManager.GetString("OverflowPopupBoxToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Pin 的本地化字符串。
+        /// </summary>
+        public static string PinButtonName {
+            get {
+                return ResourceManager.GetString("PinButtonName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Click to pin extention bar 的本地化字符串。
+        /// </summary>
+        public static string PinButtonToolTip {
+            get {
+                return ResourceManager.GetString("PinButtonToolTip", resourceCulture);
             }
         }
         
@@ -612,36 +738,90 @@ namespace Sheas_Cealer.Consts {
         /// <summary>
         ///   查找类似 Browser Path 的本地化字符串。
         /// </summary>
-        public static string SettingsModeButtonBrowserPathContent {
+        public static string SettingsStateButtonBrowserPathContent {
             get {
-                return ResourceManager.GetString("SettingsModeButtonBrowserPathContent", resourceCulture);
+                return ResourceManager.GetString("SettingsStateButtonBrowserPathContent", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 Extra Args 的本地化字符串。
         /// </summary>
-        public static string SettingsModeButtonExtraArgsContent {
+        public static string SettingsStateButtonExtraArgsContent {
             get {
-                return ResourceManager.GetString("SettingsModeButtonExtraArgsContent", resourceCulture);
+                return ResourceManager.GetString("SettingsStateButtonExtraArgsContent", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 Click to switch settings 的本地化字符串。
         /// </summary>
-        public static string SettingsModeButtonToolTip {
+        public static string SettingsStateButtonToolTip {
             get {
-                return ResourceManager.GetString("SettingsModeButtonToolTip", resourceCulture);
+                return ResourceManager.GetString("SettingsStateButtonToolTip", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 Upstream URL 的本地化字符串。
         /// </summary>
-        public static string SettingsModeButtonUpstreamUrlContent {
+        public static string SettingsStateButtonUpstreamUrlContent {
             get {
-                return ResourceManager.GetString("SettingsModeButtonUpstreamUrlContent", resourceCulture);
+                return ResourceManager.GetString("SettingsStateButtonUpstreamUrlContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Sheas 的本地化字符串。
+        /// </summary>
+        public static string SheasLabelText {
+            get {
+                return ResourceManager.GetString("SheasLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Sheas Cealer 的本地化字符串。
+        /// </summary>
+        public static string TitleTextBlockText {
+            get {
+                return ResourceManager.GetString("TitleTextBlockText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Check Host For Update 的本地化字符串。
+        /// </summary>
+        public static string UpdateHostButtonContent {
+            get {
+                return ResourceManager.GetString("UpdateHostButtonContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Tap to check host for update 的本地化字符串。
+        /// </summary>
+        public static string UpdateHostButtonToolTip {
+            get {
+                return ResourceManager.GetString("UpdateHostButtonToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Check Software For Update 的本地化字符串。
+        /// </summary>
+        public static string UpdateSoftwareButtonContent {
+            get {
+                return ResourceManager.GetString("UpdateSoftwareButtonContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Tap to check software for update 的本地化字符串。
+        /// </summary>
+        public static string UpdateSoftwareButtonToolTip {
+            get {
+                return ResourceManager.GetString("UpdateSoftwareButtonToolTip", resourceCulture);
             }
         }
         

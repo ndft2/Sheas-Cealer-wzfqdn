@@ -12,7 +12,7 @@ namespace Sheas_Cealer.Props {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.13.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.14.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -61,18 +61,6 @@ namespace Sheas_Cealer.Props {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("244, 67, 54")]
-        public global::System.Drawing.Color PrimaryColor {
-            get {
-                return ((global::System.Drawing.Color)(this["PrimaryColor"]));
-            }
-            set {
-                this["PrimaryColor"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("-1")]
         public sbyte IsLightTheme {
             get {
@@ -116,6 +104,222 @@ namespace Sheas_Cealer.Props {
             }
             set {
                 this["IsUpgradeRequired"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsClashHostsActive {
+            get {
+                return ((bool)(this["IsClashHostsActive"]));
+            }
+            set {
+                this["IsClashHostsActive"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsClashDohActive {
+            get {
+                return ((bool)(this["IsClashDohActive"]));
+            }
+            set {
+                this["IsClashDohActive"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[]")]
+        public string BrowserPathCollection {
+            get {
+                return ((string)(this["BrowserPathCollection"]));
+            }
+            set {
+                this["BrowserPathCollection"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ThemeColorName {
+            get {
+                return ((string)(this["ThemeColorName"]));
+            }
+            set {
+                this["ThemeColorName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ThemeStateName {
+            get {
+                return ((string)(this["ThemeStateName"]));
+            }
+            set {
+                this["ThemeStateName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LangOptionName {
+            get {
+                return ((string)(this["LangOptionName"]));
+            }
+            set {
+                this["LangOptionName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsUpstreamMirrorEnabled {
+            get {
+                return ((bool)(this["IsUpstreamMirrorEnabled"]));
+            }
+            set {
+                this["IsUpstreamMirrorEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsUpdateSoftwareEnabled {
+            get {
+                return ((bool)(this["IsUpdateSoftwareEnabled"]));
+            }
+            set {
+                this["IsUpdateSoftwareEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsUpdateHostEnabled {
+            get {
+                return ((bool)(this["IsUpdateHostEnabled"]));
+            }
+            set {
+                this["IsUpdateHostEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsCopyEnabled {
+            get {
+                return ((bool)(this["IsCopyEnabled"]));
+            }
+            set {
+                this["IsCopyEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsDelayEnabled {
+            get {
+                return ((bool)(this["IsDelayEnabled"]));
+            }
+            set {
+                this["IsDelayEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsSearchEnabled {
+            get {
+                return ((bool)(this["IsSearchEnabled"]));
+            }
+            set {
+                this["IsSearchEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsTrafficSpeedTimerRunning {
+            get {
+                return ((bool)(this["IsTrafficSpeedTimerRunning"]));
+            }
+            set {
+                this["IsTrafficSpeedTimerRunning"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsKeepRunningEnabled {
+            get {
+                return ((bool)(this["IsKeepRunningEnabled"]));
+            }
+            set {
+                this["IsKeepRunningEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsSpeedMonitorEnabled {
+            get {
+                return ((bool)(this["IsSpeedMonitorEnabled"]));
+            }
+            set {
+                this["IsSpeedMonitorEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsExpandBarOpen {
+            get {
+                return ((bool)(this["IsExpandBarOpen"]));
+            }
+            set {
+                this["IsExpandBarOpen"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool IsAlwaysAdminEnabled {
+            get {
+                return ((bool)(this["IsAlwaysAdminEnabled"]));
+            }
+            set {
+                this["IsAlwaysAdminEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool isClashHostsEnabled {
+            get {
+                return ((bool)(this["isClashHostsEnabled"]));
+            }
+            set {
+                this["isClashHostsEnabled"] = value;
             }
         }
     }

@@ -1,0 +1,217 @@
+﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:mdix="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:consts="clr-namespace:Sheas_Cealer.Consts"
+      xmlns:convs="clr-namespace:Sheas_Cealer.Convs"
+      xmlns:models="clr-namespace:Sheas_Cealer.Models"
+      xmlns:preses="clr-namespace:Sheas_Cealer.Preses"
+      xmlns:valids="clr-namespace:Sheas_Cealer.Valids"
+      x:Class="Sheas_Cealer.Pages.SettingsPage" x:ClassModifier="internal" mc:Ignorable="d"
+      d:DataContext="{d:DesignInstance preses:SettingsPres}"
+      Title="{x:Static consts:GlobalConst.SettingsFlyoutItemTitle}">
+    <ScrollViewer>
+        <ItemsControl Margin="0,5,0,7">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate DataType="models:SettingsItem">
+                    <mdix:Card Margin="12,5">
+                        <Grid Margin="8,8,0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="{Binding Title}"
+                                       Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
+                                       Grid.Column="0" Grid.Row="0" Margin="20,8,10,8" />
+                            <TextBlock Text="{Binding Content}"
+                                       Style="{StaticResource MaterialDesignCaptionTextBlock}"
+                                       Visibility="{Binding Content, StringFormat=Visible, TargetNullValue=Collapsed}"
+                                       Grid.ColumnSpan="2" Grid.Row="1" Margin="20,4" />
+                            <ContentPresenter DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type Page}}}"
+                                              Content="{Binding DataContext.Control, RelativeSource={RelativeSource AncestorType={x:Type Grid}}}"
+                                              Grid.Column="1" Grid.Row="0" Margin="10,8,20,8" />
+                            <ContentPresenter ContentTemplate="{StaticResource CardGrip}"
+                                              Grid.Column="0" Grid.RowSpan="2" />
+                        </Grid>
+                    </mdix:Card>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.ThemeColorSettingsItemTitle}">
+                <models:SettingsItem.Control>
+                    <ComboBox mdix:HintAssist.Hint="{x:Static consts:SettingsConst.ThemeColorComboBoxHint}"
+                              ToolTip="{x:Static consts:SettingsConst.ThemeColorComboBoxToolTip}"
+                              ItemsSource="{x:Static consts:SettingsConst.ThemeColorNameArray}"
+                              SelectedItem="{Binding ThemeColorName}" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.ThemeStateSettingsItemTitle}">
+                <models:SettingsItem.Control>
+                    <ComboBox mdix:HintAssist.Hint="{x:Static consts:SettingsConst.ThemeStateComboBoxHint}"
+                              ToolTip="{x:Static consts:SettingsConst.ThemeStateComboBoxToolTip}"
+                              ItemsSource="{x:Static consts:SettingsConst.ThemeStateNameArray}"
+                              SelectedItem="{Binding ThemeStateName}" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.LangOptionSettingsItemTitle}">
+                <models:SettingsItem.Control>
+                    <ComboBox mdix:HintAssist.Hint="{x:Static consts:SettingsConst.LangOptionComboBoxHint}"
+                              ToolTip="{x:Static consts:SettingsConst.LangOptionComboBoxToolTip}"
+                              ItemsSource="{x:Static consts:SettingsConst.LangOptionNameArray}"
+                              SelectedItem="{Binding LangOptionName}" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.BrowserPathSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.BrowserPathSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <ComboBox mdix:HintAssist.Hint="{x:Static consts:SettingsConst.BrowserPathComboBoxHint}"
+                              ToolTip="{x:Static consts:SettingsConst.BrowserPathComboBoxToolTip}"
+                              ItemsSource="{x:Static consts:GlobalConst.DefaultBrowserPathCollection}"
+                              mdix:TextFieldAssist.HasClearButton="True" IsEditable="True" AllowDrop="True"
+                              PreviewDragEnter="BrowserPathComboBox_PreviewDragHover" PreviewDragOver="BrowserPathComboBox_PreviewDragHover" Drop="BrowserPathComboBox_Drop">
+                        <ComboBox.Text>
+                            <Binding Path="BrowserPath">
+                                <Binding.ValidationRules>
+                                    <valids:SettingsBrowserPathTextBoxTextValid />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </ComboBox.Text>
+                    </ComboBox>
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.UpstreamUrlSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.UpstreamUrlSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <TextBox mdix:HintAssist.Hint="{x:Static consts:GlobalConst.DefaultUpstreamUrl}"
+                             ToolTip="{x:Static consts:SettingsConst.UpstreamUrlTextBoxToolTip}">
+                        <TextBox.Text>
+                            <Binding Path="UpstreamUrl" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <valids:SettingsUpstreamUrlTextBoxTextValid />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.ExtraArgsSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.ExtraArgsSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <TextBox mdix:HintAssist.Hint="{x:Static consts:SettingsConst.ExtraArgsTextBoxHint}"
+                             ToolTip="{x:Static consts:SettingsConst.ExtraArgsTextBoxToolTip}">
+                        <TextBox.Text>
+                            <Binding Path="ExtraArgs" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <valids:SettingsExtraArgsTextBoxTextValid />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.NginxConfSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.NginxConfSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <Button Content="{mdix:PackIcon Edit}"
+                            ToolTip="{x:Static consts:SettingsConst.NginxConfButtonToolTip}"
+                            AutomationProperties.Name="{x:Static consts:SettingsConst.NginxConfButtonName}"
+                            Style="{StaticResource SmallImageButton}"
+                            HorizontalAlignment="Right"
+                            Click="NginxConfButton_Click" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.ClashConfSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.ClashConfSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <Button Content="{mdix:PackIcon Edit}"
+                            ToolTip="{x:Static consts:SettingsConst.ClashConfButtonToolTip}"
+                            AutomationProperties.Name="{x:Static consts:SettingsConst.ClashConfButtonName}"
+                            Style="{StaticResource SmallImageButton}"
+                            HorizontalAlignment="Right"
+                            Click="ClashConfButton_Click" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.HostsConfSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.HostsConfSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <Button Content="{mdix:PackIcon Edit}"
+                            ToolTip="{x:Static consts:SettingsConst.HostsConfButtonToolTip}"
+                            AutomationProperties.Name="{x:Static consts:SettingsConst.HostsConfButtonName}"
+                            Style="{StaticResource SmallImageButton}"
+                            HorizontalAlignment="Right"
+                            Click="HostsConfButton_Click" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.UpstreamMirrorEnabledSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.UpstreamMirrorEnabledSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <ToggleButton IsChecked="{Binding IsUpstreamMirrorEnabled}"
+                                  ToolTip="{x:Static consts:SettingsConst.UpstreamMirrorEnabledToggleButtonToolTip}"
+                                  HorizontalAlignment="Right">
+                        <ToggleButton.IsEnabled>
+                            <Binding Path="UpstreamUrl">
+                                <Binding.Converter>
+                                    <convs:SettingsUpstreamMirrorEnabledToggleButtonIsEnabledConv />
+                                </Binding.Converter>
+                            </Binding>
+                        </ToggleButton.IsEnabled>
+                    </ToggleButton>
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.UpdateSoftwareEnabledSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.UpdateSoftwareEnabledSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <ToggleButton IsChecked="{Binding IsUpdateSoftwareEnabled}"
+                                  ToolTip="{x:Static consts:SettingsConst.UpdateSoftwareEnabledToggleButtonToolTip}"
+                                  HorizontalAlignment="Right" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.UpdateHostEnabledSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.UpdateHostEnabledSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <ToggleButton IsChecked="{Binding IsUpdateHostEnabled}"
+                                  ToolTip="{x:Static consts:SettingsConst.UpdateHostEnabledToggleButtonToolTip}"
+                                  HorizontalAlignment="Right" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.AlwaysAdminEnabledSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.AlwaysAdminEnabledSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <ToggleButton IsChecked="{Binding IsAlwaysAdminEnabled}"
+                                  ToolTip="{x:Static consts:SettingsConst.AlwaysAdminEnabledToggleButtonToolTip}"
+                                  HorizontalAlignment="Right" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.KeepRunningEnabledSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.KeepRunningEnabledSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <ToggleButton IsChecked="{Binding IsKeepRunningEnabled}"
+                                  ToolTip="{x:Static consts:SettingsConst.KeepRunningEnabledToggleButtonToolTip}"
+                                  HorizontalAlignment="Right" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.ClashHostsEnabledSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.ClashHostsEnabledSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <ToggleButton IsChecked="{Binding IsClashHostsEnabled}"
+                                  ToolTip="{x:Static consts:SettingsConst.ClashHostsEnabledToggleButtonToolTip}"
+                                  HorizontalAlignment="Right" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+            <models:SettingsItem Title="{x:Static consts:SettingsConst.SpeedMonitorEnabledSettingsItemTitle}"
+                                 Content="{x:Static consts:SettingsConst.SpeedMonitorEnabledSettingsItemContent}">
+                <models:SettingsItem.Control>
+                    <ToggleButton IsChecked="{Binding IsSpeedMonitorEnabled}"
+                                  ToolTip="{x:Static consts:SettingsConst.SpeedMonitorEnabledToggleButtonToolTip}"
+                                  HorizontalAlignment="Right" />
+                </models:SettingsItem.Control>
+            </models:SettingsItem>
+        </ItemsControl>
+    </ScrollViewer>
+</Page>

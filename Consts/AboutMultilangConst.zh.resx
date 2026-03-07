@@ -97,28 +97,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AgreementButtonContent" xml:space="preserve">
+  <data name="BlogAboutInfoTitle" xml:space="preserve">
+    <value>我的博客</value>
+  </data>
+  <data name="CenterAboutInfoTitle" xml:space="preserve">
+    <value>我的主页</value>
+  </data>
+  <data name="ContactAboutInfoTitle" xml:space="preserve">
+    <value>联系方式</value>
+  </data>
+  <data name="CopyLinkButtonName" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="CopyLinkButtonToolTip" xml:space="preserve">
+    <value>点击复制对应链接</value>
+  </data>
+  <data name="DeveloperAboutInfoContent" xml:space="preserve">
+    <value>Space Time</value>
+  </data>
+  <data name="DeveloperAboutInfoTitle" xml:space="preserve">
+    <value>开发者</value>
+  </data>
+  <data name="DocsAboutInfoTitle" xml:space="preserve">
+    <value>使用教程</value>
+  </data>
+  <data name="EulaAboutInfoTitle" xml:space="preserve">
     <value>使用协议</value>
   </data>
-  <data name="DeveloperButtonContent" xml:space="preserve">
-    <value>开发者: Space Time</value>
+  <data name="GotoLinkButtonName" xml:space="preserve">
+    <value>跳转</value>
   </data>
-  <data name="DocumentationButtonContent" xml:space="preserve">
-    <value>使用文档</value>
+  <data name="GotoLinkButtonToolTip" xml:space="preserve">
+    <value>点击跳转对应链接</value>
   </data>
-  <data name="EmailButtonContent" xml:space="preserve">
-    <value>联系邮箱</value>
+  <data name="IssueAboutInfoTitle" xml:space="preserve">
+    <value>问题反馈</value>
   </data>
-  <data name="PolicyButtonContent" xml:space="preserve">
+  <data name="PolicyAboutInfoTitle" xml:space="preserve">
     <value>隐私政策</value>
   </data>
-  <data name="RepositoryButtonContent" xml:space="preserve">
+  <data name="RepoAboutInfoTitle" xml:space="preserve">
     <value>开源地址</value>
   </data>
-  <data name="VersionButtonLabelContent" xml:space="preserve">
-    <value>版本号:</value>
+  <data name="VersionAboutInfoTitle" xml:space="preserve">
+    <value>版本号</value>
   </data>
-  <data name="_ReleasePagePasswordLabel" xml:space="preserve">
-    <value>密码:</value>
+  <data name="_LinkCopiedSnackbarMsg" xml:space="preserve">
+    <value>链接已复制 ✅</value>
   </data>
 </root>

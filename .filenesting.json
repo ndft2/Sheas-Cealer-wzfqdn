@@ -4,10 +4,16 @@
         "add": {
             "fileToFile": {
                 "add": {
-                    "AboutMultilangConst.resx": [ "AboutConst.cs" ],
-                    "AboutMultilangConst.zh.resx": [ "AboutConst.cs" ],
+                    "GlobalMultilangConst.resx": [ "GlobalConst.cs" ],
+                    "GlobalMultilangConst.zh.resx": [ "GlobalConst.cs" ],
+                    "AppMultilangConst.resx": [ "AppConst.cs" ],
+                    "AppMultilangConst.zh.resx": [ "AppConst.cs" ],
                     "MainMultilangConst.resx": [ "MainConst.cs" ],
                     "MainMultilangConst.zh.resx": [ "MainConst.cs" ],
+                    "RulesMultilangConst.resx": [ "RulesConst.cs" ],
+                    "RulesMultilangConst.zh.resx": [ "RulesConst.cs" ],
+                    "AboutMultilangConst.resx": [ "AboutConst.cs" ],
+                    "AboutMultilangConst.zh.resx": [ "AboutConst.cs" ],
                     "SettingsMultilangConst.resx": [ "SettingsConst.cs" ],
                     "SettingsMultilangConst.zh.resx": [ "SettingsConst.cs" ],
 
@@ -27,7 +33,7 @@
                     "MainSettingsBoxTextConv.cs": [ "MainConv.cs" ],
                     "MainSettingsBoxToolTipConv.cs": [ "MainConv.cs" ],
                     "MainSettingsFunctionButtonContentConv.cs": [ "MainConv.cs" ],
-                    "MainSettingsModeButtonContentConv.cs": [ "MainConv.cs" ],
+                    "MainSettingsStateButtonContentConv.cs": [ "MainConv.cs" ],
                     "MainBrowserButtonIsEnabledConv.cs": [ "MainConv.cs" ],
                     "MainUpdateHostButtonContentConv.cs": [ "MainConv.cs" ],
                     "MainUpdateHostButtonIsEnabledConv.cs": [ "MainConv.cs" ],

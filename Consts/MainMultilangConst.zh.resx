@@ -123,65 +123,95 @@
   <data name="AboutButtonToolTip" xml:space="preserve">
     <value>点击打开关于窗口</value>
   </data>
+  <data name="BrowserBarTextBlockText" xml:space="preserve">
+    <value>浏览器伪造</value>
+  </data>
+  <data name="BrowserBarTextBlockToolTip" xml:space="preserve">
+    <value>通过注入启动参数伪造所选浏览器流量的 SNI 拓展标记，该功能不支持 Chromium 内核版本在 141.0.7356.0 及以上的浏览器，忽略以 $ 或 ^ 开头的规则</value>
+  </data>
   <data name="BrowserButtonContent" xml:space="preserve">
     <value>启动伪造</value>
   </data>
   <data name="BrowserButtonToolTip" xml:space="preserve">
     <value>点击启动参数注入完成的浏览器</value>
   </data>
-  <data name="ComihomoButtonIsInitingContent" xml:space="preserve">
+  <data name="CealerLabelText" xml:space="preserve">
+    <value>Cealer</value>
+  </data>
+  <data name="ClashBarTextBlockText" xml:space="preserve">
+    <value>全局净化</value>
+  </data>
+  <data name="ClashBarTextBlockToolTip" xml:space="preserve">
+    <value>通过 Clash Tun + DoH 抗污染解析全系统流量的 DNS 解析请求，该功能不使用到伪造规则</value>
+  </data>
+  <data name="ClashButtonIsInitingContent" xml:space="preserve">
+    <value>全局净化启动中</value>
+  </data>
+  <data name="ClashButtonIsRunningContent" xml:space="preserve">
+    <value>停止全局净化</value>
+  </data>
+  <data name="ClashButtonIsRunningToolTip" xml:space="preserve">
+    <value>点击停止本地 Clash</value>
+  </data>
+  <data name="ClashButtonIsStoppedContent" xml:space="preserve">
+    <value>启动全局净化</value>
+  </data>
+  <data name="ClashButtonIsStoppedToolTip" xml:space="preserve">
+    <value>点击启动本地 Clash</value>
+  </data>
+  <data name="ClashButtonIsStoppingContent" xml:space="preserve">
+    <value>全局净化停止中</value>
+  </data>
+  <data name="CoclashButtonIsInitingContent" xml:space="preserve">
     <value>全局净化调整中</value>
   </data>
   <data name="ConginxButtonIsInitingContent" xml:space="preserve">
     <value>全局伪造启动中</value>
   </data>
-  <data name="EditHostsConfButtonContent" xml:space="preserve">
-    <value>编辑 Hosts 配置</value>
+  <data name="ElevateButtonName" xml:space="preserve">
+    <value>提权</value>
   </data>
-  <data name="EditHostsConfButtonToolTip" xml:space="preserve">
-    <value>点击编辑 Hosts 配置</value>
+  <data name="ElevateButtonToolTip" xml:space="preserve">
+    <value>点击以管理员身份重启软件</value>
   </data>
-  <data name="EditLocalHostButtonContent" xml:space="preserve">
-    <value>编辑本地规则</value>
+  <data name="ExpandToggleButtonClosedToolTip" xml:space="preserve">
+    <value>点击展开功能栏</value>
   </data>
-  <data name="EditLocalHostButtonToolTip" xml:space="preserve">
-    <value>点击编辑本地规则</value>
+  <data name="ExpandToggleButtonName" xml:space="preserve">
+    <value>展开</value>
   </data>
-  <data name="EditMihomoConfButtonContent" xml:space="preserve">
-    <value>编辑 Mihomo 配置</value>
+  <data name="ExpandToggleButtonOpenToolTip" xml:space="preserve">
+    <value>点击收起功能栏</value>
   </data>
-  <data name="EditMihomoConfButtonToolTip" xml:space="preserve">
-    <value>点击编辑 Mihomo 配置</value>
+  <data name="GithubButtonName" xml:space="preserve">
+    <value>Github</value>
   </data>
-  <data name="EditNginxConfButtonContent" xml:space="preserve">
-    <value>编辑 Nginx 配置</value>
+  <data name="GithubButtonToolTip" xml:space="preserve">
+    <value>点击跳转开源地址</value>
   </data>
-  <data name="EditNginxConfButtonToolTip" xml:space="preserve">
-    <value>点击编辑 Nginx 配置</value>
+  <data name="HumburgerToggleButtonClosedToolTip" xml:space="preserve">
+    <value>点击打开导航栏</value>
   </data>
-  <data name="EditUpstreamHostButtonContent" xml:space="preserve">
-    <value>编辑上游规则</value>
+  <data name="HumburgerToggleButtonName" xml:space="preserve">
+    <value>导航</value>
   </data>
-  <data name="EditUpstreamHostButtonToolTip" xml:space="preserve">
-    <value>点击编辑上游规则</value>
+  <data name="HumburgerToggleButtonOpenToolTip" xml:space="preserve">
+    <value>点击关闭导航栏</value>
   </data>
-  <data name="MihomoButtonIsInitingContent" xml:space="preserve">
-    <value>全局净化启动中</value>
+  <data name="LaunchButtonActiveToolTip" xml:space="preserve">
+    <value>点击停止全局伪造</value>
   </data>
-  <data name="MihomoButtonIsRunningContent" xml:space="preserve">
-    <value>停止全局净化</value>
+  <data name="LaunchButtonInactiveToolTip" xml:space="preserve">
+    <value>点击启动全局伪造</value>
   </data>
-  <data name="MihomoButtonIsRunningToolTip" xml:space="preserve">
-    <value>点击停止本地 Mihomo</value>
+  <data name="LaunchButtonName" xml:space="preserve">
+    <value>启动</value>
   </data>
-  <data name="MihomoButtonIsStoppedContent" xml:space="preserve">
-    <value>启动全局净化</value>
+  <data name="NginxBarTextBlockText" xml:space="preserve">
+    <value>全局伪造</value>
   </data>
-  <data name="MihomoButtonIsStoppedToolTip" xml:space="preserve">
-    <value>点击启动本地 Mihomo</value>
-  </data>
-  <data name="MihomoButtonIsStoppingContent" xml:space="preserve">
-    <value>全局净化停止中</value>
+  <data name="NginxBarTextBlockToolTip" xml:space="preserve">
+    <value>通过 Nginx 本地反代伪造全系统流量的 SNI 拓展标记，该功能不支持分片，忽略规则中不位于开头的通配符，忽略以 # % 或 ^ 开头的规则</value>
   </data>
   <data name="NginxButtonIsInitingContent" xml:space="preserve">
     <value>全局伪造启动中</value>
@@ -210,6 +240,18 @@
   <data name="NoClickButtonIsStoppedToolTip" xml:space="preserve">
     <value>不要点击这个按钮</value>
   </data>
+  <data name="OverflowPopupBoxName" xml:space="preserve">
+    <value>更多</value>
+  </data>
+  <data name="OverflowPopupBoxToolTip" xml:space="preserve">
+    <value>点击打开更多选项</value>
+  </data>
+  <data name="PinButtonName" xml:space="preserve">
+    <value>固定</value>
+  </data>
+  <data name="PinButtonToolTip" xml:space="preserve">
+    <value>点击固定功能栏</value>
+  </data>
   <data name="SettingsBoxBrowserPathToolTip" xml:space="preserve">
     <value>填入任意以 Chromium 为内核的浏览器路径</value>
   </data>
@@ -237,17 +279,35 @@
   <data name="SettingsFunctionButtonUpstreamUrlContent" xml:space="preserve">
     <value>重置链接</value>
   </data>
-  <data name="SettingsModeButtonBrowserPathContent" xml:space="preserve">
+  <data name="SettingsStateButtonBrowserPathContent" xml:space="preserve">
     <value>文件路径</value>
   </data>
-  <data name="SettingsModeButtonExtraArgsContent" xml:space="preserve">
+  <data name="SettingsStateButtonExtraArgsContent" xml:space="preserve">
     <value>额外参数</value>
   </data>
-  <data name="SettingsModeButtonToolTip" xml:space="preserve">
+  <data name="SettingsStateButtonToolTip" xml:space="preserve">
     <value>点击切换设置模式</value>
   </data>
-  <data name="SettingsModeButtonUpstreamUrlContent" xml:space="preserve">
+  <data name="SettingsStateButtonUpstreamUrlContent" xml:space="preserve">
     <value>上游链接</value>
+  </data>
+  <data name="SheasLabelText" xml:space="preserve">
+    <value>Sheas</value>
+  </data>
+  <data name="TitleTextBlockText" xml:space="preserve">
+    <value>Sheas Cealer</value>
+  </data>
+  <data name="UpdateHostButtonContent" xml:space="preserve">
+    <value>检查规则更新</value>
+  </data>
+  <data name="UpdateHostButtonToolTip" xml:space="preserve">
+    <value>点击检查规则更新</value>
+  </data>
+  <data name="UpdateSoftwareButtonContent" xml:space="preserve">
+    <value>检查软件更新</value>
+  </data>
+  <data name="UpdateSoftwareButtonToolTip" xml:space="preserve">
+    <value>点击检查软件更新</value>
   </data>
   <data name="UpdateUpstreamHostButtonContent" xml:space="preserve">
     <value>更新上游规则</value>
@@ -258,8 +318,17 @@
   <data name="_BrowserPathDialogFilterFileType" xml:space="preserve">
     <value>浏览器</value>
   </data>
-  <data name="_CealHostErrorPrompt" xml:space="preserve">
+  <data name="_BrowserProcessKillPrompt" xml:space="preserve">
+    <value>启动前将关闭所选浏览器的所有进程，是否继续？</value>
+  </data>
+  <data name="_CealHostInvalidMsg" xml:space="preserve">
     <value>伪造规则含有语法错误，部分规则无法识别，是否仍然继续?</value>
+  </data>
+  <data name="_ClashConfInvalidMsg" xml:space="preserve">
+    <value>Clash 配置文件含有语法错误，部分配置无法识别，是否任然继续?</value>
+  </data>
+  <data name="_ClashLaunchErrorMsg" xml:space="preserve">
+    <value>Clash 启动失败</value>
   </data>
   <data name="_GameClickOnceMsg" xml:space="preserve">
     <value>就知道你会点，但其实什么事情都不会发生的。嘻嘻~</value>
@@ -282,35 +351,26 @@
   <data name="_GameStartMsg" xml:space="preserve">
     <value>不，求你杀了我，我... 控制不住了...</value>
   </data>
-  <data name="_KillBrowserProcessPrompt" xml:space="preserve">
-    <value>启动前将关闭所选浏览器的所有进程，是否继续？</value>
+  <data name="_NginxConfInvalidMsg" xml:space="preserve">
+    <value>Nginx 配置文件含有语法错误，部分配置无法识别，是否任然继续?</value>
   </data>
-  <data name="_LaunchHostsNginxPrompt" xml:space="preserve">
-    <value>正在使用基于 Hosts 的非泛域名全局伪造，是否继续?</value>
-  </data>
-  <data name="_LaunchMihomoErrorMsg" xml:space="preserve">
-    <value>Mihomo 启动失败</value>
-  </data>
-  <data name="_LaunchNginxErrorPrompt" xml:space="preserve">
-    <value>Nginx 启动失败，是否打开错误日志?</value>
-  </data>
-  <data name="_LaunchNginxFlashingPrompt" xml:space="preserve">
-    <value>Warning: 代理核心正在遭受攻击，无法伪造 SNI，已紧急开启 SNI 拔除模式，是否继续?</value>
-  </data>
-  <data name="_LaunchProxyPrompt" xml:space="preserve">
-    <value>使用完请务必记得回来手动关闭代理，是否继续?</value>
-  </data>
-  <data name="_MihomoConfErrorMsg" xml:space="preserve">
-    <value>Mihomo 配置文件含有语法错误，部分配置无法识别</value>
-  </data>
-  <data name="_NginxHttpPortOccupiedPrompt" xml:space="preserve">
+  <data name="_NginxHttpPortOccupiedMsg" xml:space="preserve">
     <value>本地 80 端口被占用，是否换用 {0} 端口继续? 这可能导致 http 连接无法自动跳转到 https</value>
   </data>
-  <data name="_NginxHttpsPortOccupiedPrompt" xml:space="preserve">
+  <data name="_NginxHttpsPortOccupiedMsg" xml:space="preserve">
     <value>本地 443 端口被占用，是否换用 {0} 端口继续? 这可能导致全局伪造无法正常工作</value>
+  </data>
+  <data name="_NginxLaunchErrorPrompt" xml:space="preserve">
+    <value>Nginx 启动失败，是否打开错误日志?</value>
+  </data>
+  <data name="_NginxLaunchFlashingPrompt" xml:space="preserve">
+    <value>Warning: 代理核心正在遭受攻击，无法伪造 SNI，已紧急开启 SNI 拔除模式，是否继续?</value>
   </data>
   <data name="_OverrideUpstreamHostPrompt" xml:space="preserve">
     <value>上游规则有更新可用，需要更新吗？否则只为你打开上游规则网页</value>
+  </data>
+  <data name="_ProxyLaunchPrompt" xml:space="preserve">
+    <value>使用完请务必记得回来手动关闭代理，是否继续?</value>
   </data>
   <data name="_UpdateUpstreamHostSuccessMsg" xml:space="preserve">
     <value>更新已完成</value>
